@@ -1,19 +1,32 @@
-import pullCordSwitch from "@/assets/products/pull-cord-switch.jpg";
+import antiCollisionDevice from "@/assets/products/Anti-collision device.png";
 import beltSwaySwitch from "@/assets/products/belt-sway-switch.jpg";
+import chainBlockHoist from "@/assets/products/chain block mannual chain hoist.jpg";
+import currentCollector from "@/assets/products/CURRENT COLLECTOR.jpg";
+import dischargeRod from "@/assets/products/discharge rod.jpg";
+import dslBusbar from "@/assets/products/dsl busbar.png";
+import earthCurrentCollector from "@/assets/products/earth-current-collector.jpg";
+import electricHydraulicThruster from "@/assets/products/Electric-hydraulic thruster.jpg";
+import electromagneticFlowMeter from "@/assets/products/electromagnetic flow meter.jpg";
+import eotCrane from "@/assets/products/eot crane.jpeg";
+import heatResistantFireSleeve from "@/assets/products/heat resistant fire sleeve.jpg";
+import hydraulicFitting from "@/assets/products/hydraulic-fitting.jpg";
+import hydraulicHose from "@/assets/products/hydraulic-hose.jpg";
+import industrialCarbonBrush from "@/assets/products/industrial carbon brush.jpg";
+import industrialDrumHeater from "@/assets/products/Industrial drum heater.jpg";
+import industrialHooter from "@/assets/products/industrial-hooter.jpg";
+import joystickController from "@/assets/products/joystick controller.jpg";
+import loadCell from "@/assets/products/load-cell.jpg";
+import motionSensor from "@/assets/products/motion-sensor.jpg";
+import plugSocket from "@/assets/products/plug & socket.jpg";
+import pullCordRope from "@/assets/products/pull cord rope.jpg";
+import pullCordSwitchLamp from "@/assets/products/Pull Cord Switch with Lamp indication.jpg";
+import pullCordSwitch from "@/assets/products/Pull cord switch.jpg";
+import resistanceBox from "@/assets/products/resistance box.jpg";
+import smokeSensor from "@/assets/products/smoke-sensor.jpg";
+import waveSling from "@/assets/products/wave sling.jpg";
+import weldingDistributionBox from "@/assets/products/welding-distribution-box.jpg";
+import winchMachine from "@/assets/products/winch machine.jpg";
 import zeroSpeedSwitch from "@/assets/products/zero-speed-switch.jpg";
-import beltTearSwitch from "@/assets/products/belt-tear-switch.jpg";
-import limitSwitch from "@/assets/products/limit-switch.jpg";
-import safetySwitch from "@/assets/products/safety-switch.jpg";
-import industrialThermostat from "@/assets/products/industrial-thermostat.jpg";
-import temperatureController from "@/assets/products/temperature-controller.jpg";
-import industrialHeater from "@/assets/products/industrial-heater.jpg";
-import controlPanel from "@/assets/products/control-panel.jpg";
-import industrialSensors from "@/assets/products/industrial-sensors.jpg";
-import levelSwitch from "@/assets/products/level-switch.jpg";
-import rotarySwitch from "@/assets/products/rotary-switch.jpg";
-import digitalTempController from "@/assets/products/digital-temperature-controller.jpg";
-import conveyorSafetySwitch from "@/assets/products/conveyor-safety-switch.jpg";
-import industrialControlSystem from "@/assets/products/industrial-control-system.jpg";
 
 export interface Product {
   id: string;
@@ -28,17 +41,17 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "pull-cord-switch",
-    name: "Pull Cord Switch",
-    shortDescription: "Emergency stop pull cord switch for conveyor belt safety systems.",
-    description: "The Pull Cord Switch is a critical safety device designed for emergency stopping of conveyor belts. It allows operators to halt conveyor operations from any point along the belt by pulling the attached cord. Built with heavy-duty construction, it ensures reliable performance in harsh industrial environments.",
-    image: pullCordSwitch,
-    features: ["Heavy-duty die-cast aluminum housing", "IP65 weather protection", "Manual reset mechanism", "Visual indicator for trip status", "Adjustable cord tension", "Easy installation and maintenance"],
-    applications: ["Mining conveyor systems", "Cement plants", "Steel manufacturing", "Power plants", "Port & terminal operations", "Bulk material handling"],
-    specifications: { "Housing Material": "Die-cast Aluminum", "Protection Rating": "IP65", "Operating Voltage": "240V AC / 24V DC", "Contact Rating": "10A @ 240V AC", "Operating Temperature": "-25°C to +70°C", "Cable Length": "Up to 100m" }
+    id: "antiCollisionDevice",
+    name: "Anti-Collision Device",
+    shortDescription: "Collision avoidance for overhead cranes and trolleys.",
+    description: "The Anti-Collision Device detects obstacles and prevents unintended contact between moving crane components. It helps protect personnel and equipment by issuing early warnings and initiating controlled slow-downs.",
+    image: antiCollisionDevice,
+    features: ["Adjustable detection range", "Audible and visual alarms", "Robust IP65 housing", "Easy integration with crane controls", "Low power consumption"],
+    applications: ["Overhead cranes", "Gantry cranes", "Port terminals", "Heavy fabrication shops", "Steel mills"],
+    specifications: { "Detection Range": "0.5 - 20m", "Power Supply": "24V DC", "Outputs": "Relay / 4-20mA", "Protection Rating": "IP65", "Operating Temperature": "-20°C to +60°C" }
   },
   {
-    id: "belt-sway-switch",
+    id: "beltSwaySwitch",
     name: "Belt Sway Switch",
     shortDescription: "Monitors belt alignment and prevents damage from belt misalignment.",
     description: "The Belt Sway Switch monitors conveyor belt alignment and triggers an alarm or shutdown when the belt drifts beyond acceptable limits. This prevents belt damage, material spillage, and structural harm to the conveyor system.",
@@ -48,7 +61,267 @@ export const products: Product[] = [
     specifications: { "Housing Material": "Die-cast Aluminum", "Protection Rating": "IP65", "Activation Angle": "10° to 35°", "Contact Rating": "10A @ 240V AC", "Operating Temperature": "-25°C to +70°C", "Mounting": "Universal bracket" }
   },
   {
-    id: "zero-speed-switch",
+    id: "chainBlockHoist",
+    name: "Chain Block Hoist",
+    shortDescription: "Manual hoist for lifting and lowering loads with precision.",
+    description: "The Chain Block Hoist offers a compact and durable lifting solution for workshops, maintenance bays, and construction sites. Its smooth gearing and high-strength chain deliver reliable operation even under heavy use.",
+    image: chainBlockHoist,
+    features: ["High-strength alloy chain", "Multiple load capacities", "Smooth gearbox operation", "Compact design", "Integrated load limiter"],
+    applications: ["Workshop lifting", "Construction sites", "Maintenance bays", "Warehousing", "Rigging operations"],
+    specifications: { "Capacity": "0.5t to 10t", "Lift Height": "1.5m (standard)", "Chain Material": "Alloy steel", "Safety Factor": "4:1", "Brake Type": "Automatic" }
+  },
+  {
+    id: "currentCollector",
+    name: "Current Collector",
+    shortDescription: "Reliable current collection for electrified cranes and trolleys.",
+    description: "Our Current Collectors ensure stable power transfer from conductor bars to moving equipment. Designed for demanding industrial environments, they maintain consistent contact and minimize wear.",
+    image: currentCollector,
+    features: ["Low-friction contact shoes", "Modular mounting", "Replaceable contact inserts", "High conductivity materials", "Durable weatherproof housing"],
+    applications: ["Overhead cranes", "Gantry systems", "Automated guided vehicles", "Material handling systems"],
+    specifications: { "Voltage Rating": "380V / 690V AC", "Current Rating": "100A to 500A", "Protection Rating": "IP44", "Contact Material": "Copper alloy", "Operating Temperature": "-20°C to +60°C" }
+  },
+  {
+    id: "dischargeRod",
+    name: "Discharge Rod",
+    shortDescription: "Grounding rod for safe discharge of static electricity.",
+    description: "The Discharge Rod provides a safe path to ground for static and stray electrical charges. It is used in material handling and industrial systems to protect equipment and personnel.",
+    image: dischargeRod,
+    features: ["High-conductivity tip", "Robust insulating handle", "Quick-mount bracket", "Corrosion-resistant finish"],
+    applications: ["Bulk material handling", "Dust collection systems", "Electrostatic discharge protection", "Conveyor platforms"],
+    specifications: { "Length": "1.2m", "Material": "Stainless steel", "Mounting": "Clamp / flange", "Operating Temperature": "-40°C to +80°C", "Protection Rating": "IP54" }
+  },
+  {
+    id: "dslBusbar",
+    name: "DSL Busbar",
+    shortDescription: "Durable busbar system for crane power distribution.",
+    description: "The DSL Busbar provides a robust and low-maintenance power distribution solution for cranes and gantries. Its modular design allows easy extension and reliable operation in heavy-duty environments.",
+    image: dslBusbar,
+    features: ["Modular construction", "Low resistance conductors", "IP55 protection", "Easy installation", "High current capacity"],
+    applications: ["Overhead cranes", "Gantry cranes", "Port terminals", "Steel mills", "Heavy fabrication"],
+    specifications: { "Current Rating": "200A to 1200A", "Voltage Rating": "400V / 690V", "Protection Rating": "IP55", "Conductor Material": "Copper / Aluminum", "Operating Temperature": "-25°C to +60°C" }
+  },
+  {
+    id: "earthCurrentCollector",
+    name: "Earth Current Collector",
+    shortDescription: "Grounding device for safe current collection on mobile equipment.",
+    description: "The Earth Current Collector ensures stable grounding for moving cranes and trolleys, reducing the risk of electrical faults and ensuring operator safety.",
+    image: earthCurrentCollector,
+    features: ["Replaceable contact pads", "Robust mounting bracket", "Low wear design", "Corrosion-resistant finish"],
+    applications: ["Crane grounding", "Rail-mounted equipment", "Heavy lifting systems"],
+    specifications: { "Contact Material": "Copper alloy", "Current Rating": "50A to 200A", "Protection Rating": "IP44", "Operating Temperature": "-20°C to +60°C", "Mounting": "Bolt-on" }
+  },
+  {
+    id: "Electric-hydraulic thruster",
+    name: "Electric Hydraulic Thruster",
+    shortDescription: "Compact hydraulic actuator for precision positioning.",
+    description: "The Electric Hydraulic Thruster combines electrical actuation with hydraulic power for smooth and precise motion control. It is ideal for applications requiring high force in a compact form.",
+    image: electricHydraulicThruster,
+    features: ["High force output", "Compact footprint", "Smooth motion control", "Adjustable stroke", "Integrated limit switches"],
+    applications: ["Valve actuation", "Material handling", "Industrial automation", "Packaging machinery"],
+    specifications: { "Force": "500N to 3000N", "Stroke": "10mm to 100mm", "Supply Voltage": "24V DC / 110V AC", "Protection Rating": "IP65", "Operating Temperature": "-10°C to +60°C" }
+  },
+  {
+    id: "electromagneticFlowMeter",
+    name: "Electromagnetic Flow Meter",
+    shortDescription: "Accurate flow measurement for conductive liquids.",
+    description: "The Electromagnetic Flow Meter provides reliable, maintenance-free flow measurement for conductive fluids. Its non-intrusive sensing and wide rangeability make it ideal for water treatment and process control.",
+    image: electromagneticFlowMeter,
+    features: ["No moving parts", "Wide flow range", "Bi-directional measurement", "Digital output", "High accuracy"],
+    applications: ["Water treatment", "Chemical dosing", "Pulp & paper", "Food & beverage"],
+    specifications: { "Accuracy": "±0.5% of reading", "Line Size": "DN10 to DN200", "Output": "4-20mA / Pulse / Modbus", "Power Supply": "24V DC / 110V AC", "Protection Rating": "IP67" }
+  },
+  {
+    id: "eotCrane",
+    name: "EOT Crane",
+    shortDescription: "Heavy-duty electric overhead travelling crane systems.",
+    description: "Our EOT Cranes are engineered for heavy lifting and high uptime in demanding environments. They offer smooth motion, precise positioning, and robust safety features.",
+    image: eotCrane,
+    features: ["Custom lifting capacities", "Variable frequency drive control", "Anti-sway systems", "Safety limit switches", "Durable structural design"],
+    applications: ["Steel mills", "Shipyards", "Foundries", "Machine shops", "Logistics centers"],
+    specifications: { "Capacity": "1t to 100t+", "Span": "Up to 30m+", "Travel Speed": "0.5 to 60 m/min", "Hoist Speed": "0.5 to 30 m/min", "Power Supply": "415V 3-phase" }
+  },
+  {
+    id: "heatResistantFireSleeve",
+    name: "Heat Resistant Fire Sleeve",
+    shortDescription: "Fireproof sleeve for protecting hoses and cables.",
+    description: "The Heat Resistant Fire Sleeve shields hydraulic hoses, cables, and wiring from extreme temperatures, sparks, and molten splatter. It is ideal for foundries, welding areas, and high-temperature environments.",
+    image: heatResistantFireSleeve,
+    features: ["High temperature resistance", "Flexible construction", "Easy installation", "Abrasion resistance", "UV stable"],
+    applications: ["Foundries", "Welding stations", "Steel mills", "Glass manufacturing"],
+    specifications: { "Temperature Rating": "-60°C to +1100°C", "Material": "Silicone-coated fiberglass", "Outer Diameter": "10mm to 150mm", "Length": "Custom lengths available", "Color": "Black" }
+  },
+  {
+    id: "hydraulicFitting",
+    name: "Hydraulic Fitting",
+    shortDescription: "High-pressure fittings for hydraulic hose assemblies.",
+    description: "Our Hydraulic Fittings provide leak-free connections for high-pressure hydraulic systems. They are available in multiple thread standards and materials to suit a wide variety of applications.",
+    image: hydraulicFitting,
+    features: ["High pressure rating", "Wide thread compatibility", "Corrosion-resistant plating", "Swaged and flared types", "Easy installation"],
+    applications: ["Mobile hydraulics", "Industrial machinery", "Agricultural equipment", "Marine hydraulics"],
+    specifications: { "Pressure Rating": "Up to 6000 PSI", "Material": "Carbon steel / Stainless steel", "Thread Types": "BSP, NPT, JIC", "Temperature Range": "-40°C to +120°C", "Seal Type": "O-ring / Metal-to-metal" }
+  },
+  {
+    id: "hydraulicHose",
+    name: "Hydraulic Hose",
+    shortDescription: "Reinforced hose for high-pressure hydraulic systems.",
+    description: "Our Hydraulic Hoses are designed for reliability in demanding hydraulic applications. With multiple reinforcement layers and abrasion-resistant cover, they deliver long service life and safety.",
+    image: hydraulicHose,
+    features: ["High burst strength", "Abrasion resistant cover", "Flexible construction", "Wide temperature range", "Compatible with multiple fluids"],
+    applications: ["Construction equipment", "Agricultural machinery", "Industrial hydraulics", "Mining equipment"],
+    specifications: { "Pressure Rating": "5000 PSI / 7000 PSI", "Tube Material": "Synthetic rubber", "Cover Material": "EPDM / Neoprene", "Temperature Range": "-40°C to +120°C", "Reinforcement": "Steel wire braided" }
+  },
+  {
+    id: "industrialCarbonBrush",
+    name: "Industrial Carbon Brush",
+    shortDescription: "Replacement carbon brushes for motors and generators.",
+    description: "Our Industrial Carbon Brushes offer consistent conductivity and long life in demanding motor and generator applications. They are engineered for minimal wear and reliable performance.",
+    image: industrialCarbonBrush,
+    features: ["High conductivity", "Low wear characteristics", "Precision machining", "Wide compatibility", "Easy replacement"],
+    applications: ["Electric motors", "Generators", "Wind turbines", "Rail traction motors"],
+    specifications: { "Material": "Graphite / Carbon composite", "Operating Temperature": "-20°C to +120°C", "Current Density": "8 A/cm²", "Brush Size": "Custom sizes available", "Spring Type": "Helical / Flat" }
+  },
+  {
+    id: "industrialDrumHeater",
+    name: "Industrial Drum Heater",
+    shortDescription: "Portable heater for temperature control of drums and barrels.",
+    description: "The Industrial Drum Heater maintains consistent temperatures for viscous fluids and chemicals stored in drums. Its durable construction and easy fastening make it ideal for process heating and material handling.",
+    image: industrialDrumHeater,
+    features: ["Even heat distribution", "Adjustable thermostat", "Soft insulation", "Quick-wrap design", "Safety cut-off"],
+    applications: ["Chemical processing", "Paints & coatings", "Food industry", "Lubricants & oils"],
+    specifications: { "Power Rating": "500W to 2000W", "Temperature Range": "50°C to 150°C", "Voltage": "220V / 110V AC", "Material": "Silicone rubber", "Protection": "IP54" }
+  },
+  {
+    id: "industrialHooter",
+    name: "Industrial Hooter",
+    shortDescription: "High-decibel audible alarm for industrial safety notifications.",
+    description: "The Industrial Hooter provides a loud, clear alarm signal for emergencies and process alerts in noisy industrial environments. Its rugged design ensures reliable operation even in harsh conditions.",
+    image: industrialHooter,
+    features: ["High sound output", "Weatherproof housing", "Multi-tone capability", "Easy mounting", "Low power consumption"],
+    applications: ["Factory floor alerts", "Emergency evacuation", "Process alarms", "Vehicle reversing"],
+    specifications: { "Sound Level": "110 dB at 1m", "Voltage": "24V DC / 110V AC / 230V AC", "Protection Rating": "IP65", "Operating Temperature": "-20°C to +60°C", "Tone Options": "Single / Multi-tone" }
+  },
+  {
+    id: "joystickController",
+    name: "Joystick Controller",
+    shortDescription: "Ergonomic joystick for precision motion control.",
+    description: "The Joystick Controller offers smooth and accurate control for cranes, hoists, and material handling equipment. Its robust construction withstands harsh environments while delivering responsive operation.",
+    image: joystickController,
+    features: ["Ergonomic grip", "Proportional control", "Multiple axes support", "Dust & water resistant", "Modular mounting"],
+    applications: ["Cranes & hoists", "Material handling equipment", "Remote control stations", "Robotics"],
+    specifications: { "Control Axes": "1 to 4", "Output": "0-10V / 4-20mA / CAN", "Protection Rating": "IP65", "Operating Temperature": "-20°C to +60°C", "Supply Voltage": "12-24V DC" }
+  },
+  {
+    id: "loadCell",
+    name: "Load Cell",
+    shortDescription: "Precision load measurement for weighing and force sensing.",
+    description: "Our Load Cells deliver high-accuracy weight and force measurement in industrial weighing systems. They are designed for long-term stability and rugged use.",
+    image: loadCell,
+    features: ["High accuracy", "Low profile design", "IP67 protection", "Stainless steel construction", "Easy calibration"],
+    applications: ["Weighbridges", "Tank weighing", "Material batching", "Force monitoring"],
+    specifications: { "Capacity": "5kg to 50t", "Accuracy": "0.03% FS", "Output": "mV/V", "Excitation": "5-15V DC", "Protection Rating": "IP67" }
+  },
+  {
+    id: "motionSensor",
+    name: "Motion Sensor",
+    shortDescription: "Reliable motion detection for safety and automation.",
+    description: "The Motion Sensor detects movement and triggers alarms or automation sequences. It is suitable for security, lighting control, and safety applications.",
+    image: motionSensor,
+    features: ["Wide detection range", "Selectable sensitivity", "Day/night operation", "IP65 housing", "Low power consumption"],
+    applications: ["Security systems", "Automatic lighting", "Machine guarding", "Access control"],
+    specifications: { "Detection Range": "10m to 20m", "Detection Angle": "120°", "Power Supply": "12-24V DC", "Output": "Relay / NPN / PNP", "Protection Rating": "IP65" }
+  },
+  {
+    id: "plugSocket",
+    name: "Plug Socket",
+    shortDescription: "Industrial-grade plug and socket connectors for power distribution.",
+    description: "Our Plug Sockets provide safe and secure power connections in industrial environments. Built to withstand heavy use, they are suitable for mobile equipment and fixed installations.",
+    image: plugSocket,
+    features: ["IP67 protection", "Rugged construction", "Locking mechanism", "Multiple voltages available", "Easy installation"],
+    applications: ["Mobile machinery", "Temporary power", "Industrial equipment", "Outdoor installations"],
+    specifications: { "Voltage Rating": "230V / 400V", "Current Rating": "16A to 63A", "Protection Rating": "IP67", "Pin Configuration": "3P+E / 5P+E", "Material": "Polyamide" }
+  },
+  {
+    id: "pullCordRope",
+    name: "Pull Cord Rope",
+    shortDescription: "Durable pull cord assembly for emergency stop systems.",
+    description: "The Pull Cord Rope is designed for use with emergency stop pull cord switches, providing a reliable mechanical link to activate safety devices across conveyor systems.",
+    image: pullCordRope,
+    features: ["High tensile strength", "Weather-resistant coating", "UV stabilized", "Easy tension adjustment", "Long service life"],
+    applications: ["Conveyor safety systems", "Material handling lines", "Mining operations", "Bulk handling"],
+    specifications: { "Material": "Polyester braided", "Diameter": "6mm to 10mm", "Length": "Up to 200m", "Tensile Strength": ">2000N", "Operating Temperature": "-40°C to +80°C" }
+  },
+  {
+    id: "pullCordSwitchLamp",
+    name: "Pull Cord Switch Lamp",
+    shortDescription: "Indicator lamp for pull cord switch status monitoring.",
+    description: "The Pull Cord Switch Lamp provides visual status indication for pull cord switch systems, making it easy to identify triggered conditions from a distance.",
+    image: pullCordSwitchLamp,
+    features: ["LED status indication", "Universal mounting", "High visibility", "Low power consumption"],
+    applications: ["Conveyor safety systems", "Industrial controls", "Process monitoring"],
+    specifications: { "Voltage": "24V DC / 110V AC", "Color": "Red / Green / Yellow", "Protection Rating": "IP65", "Power": "<5W", "Mounting": "Panel / DIN rail" }
+  },
+  {
+    id: "pullCordSwitch",
+    name: "Pull Cord Switch",
+    shortDescription: "Emergency stop pull cord switch for conveyor belt safety systems.",
+    description: "The Pull Cord Switch is a critical safety device designed for emergency stopping of conveyor belts. It allows operators to halt conveyor operations from any point along the belt by pulling the attached cord. Built with heavy-duty construction, it ensures reliable performance in harsh industrial environments.",
+    image: pullCordSwitch,
+    features: ["Heavy-duty die-cast aluminum housing", "IP65 weather protection", "Manual reset mechanism", "Visual indicator for trip status", "Adjustable cord tension", "Easy installation and maintenance"],
+    applications: ["Mining conveyor systems", "Cement plants", "Steel manufacturing", "Power plants", "Port & terminal operations", "Bulk material handling"],
+    specifications: { "Housing Material": "Die-cast Aluminum", "Protection Rating": "IP65", "Operating Voltage": "240V AC / 24V DC", "Contact Rating": "10A @ 240V AC", "Operating Temperature": "-25°C to +70°C", "Cable Length": "Up to 100m" }
+  },
+  {
+    id: "resistanceBox",
+    name: "Resistance Box",
+    shortDescription: "Adjustable resistance module for testing and calibration.",
+    description: "The Resistance Box provides a stable and adjustable load for testing instruments, sensors, and control circuits. It is ideal for calibration labs and electrical maintenance.",
+    image: resistanceBox,
+    features: ["Stepped resistance values", "Robust enclosure", "Easy readout", "Low temperature coefficient"],
+    applications: ["Calibration labs", "Test benches", "Electrical workshops", "Instrumentation"],
+    specifications: { "Resistance Range": "0 – 10kΩ", "Tolerance": "±1%", "Power Rating": "5W", "Connections": "Banana / Terminal", "Operating Temperature": "-10°C to +60°C" }
+  },
+  {
+    id: "smokeSensor",
+    name: "Smoke Sensor",
+    shortDescription: "Smoke detection for fire safety and early warning.",
+    description: "The Smoke Sensor detects smoke particles and provides early warning for fire safety systems. It is suitable for industrial and commercial installations.",
+    image: smokeSensor,
+    features: ["Photoelectric sensing", "Low false alarm", "LED status indicator", "Easy mounting"],
+    applications: ["Warehouses", "Factories", "Offices", "Storage facilities"],
+    specifications: { "Power Supply": "24V DC", "Detection Type": "Photoelectric", "Alarm Output": "Relay", "Protection Rating": "IP42", "Operating Temperature": "-10°C to +50°C" }
+  },
+  {
+    id: "waveSling",
+    name: "Wave Sling",
+    shortDescription: "Flexible lifting sling for safe load handling.",
+    description: "The Wave Sling is a soft lifting sling designed to protect loads while providing high tensile strength. It is ideal for lifting delicate or irregularly shaped items.",
+    image: waveSling,
+    features: ["High strength synthetic fibers", "Abrasion-resistant cover", "Wide bearing surface", "Lightweight and flexible"],
+    applications: ["Machinery lifting", "Shipping & logistics", "Construction", "Rigging"],
+    specifications: { "Capacity": "1t to 20t", "Material": "Polyester", "Web Width": "50mm to 200mm", "Safety Factor": "7:1", "Temperature Range": "-40°C to +100°C" }
+  },
+  {
+    id: "weldingDistributionBox",
+    name: "Welding Distribution Box",
+    shortDescription: "Power distribution for welding equipment and multiple stations.",
+    description: "The Welding Distribution Box allows multiple welding machines to share a single power source safely. It includes overcurrent protection and robust connectors for industrial use.",
+    image: weldingDistributionBox,
+    features: ["Multiple welding outlets", "Overcurrent protection", "Heavy-duty connectors", "Portable design"],
+    applications: ["Welding workshops", "Fabrication shops", "Maintenance yards"],
+    specifications: { "Input Voltage": "415V 3-phase", "Output": "6 x 63A outlets", "Protection": "MCB / RCCB", "Enclosure": "IP54", "Dimensions": "400x300x200mm" }
+  },
+  {
+    id: "winchMachine",
+    name: "Winch Machine",
+    shortDescription: "Motorized winch for controlled lifting and pulling.",
+    description: "The Winch Machine provides reliable pulling power for lifting, towing, and material handling applications. It features durable gearing and a smooth braking system.",
+    image: winchMachine,
+    features: ["High torque motor", "Automatic brake", "Multiple drum speeds", "Remote control option"],
+    applications: ["Construction", "Mining", "Logging", "Marine"],
+    specifications: { "Line Pull": "1t to 20t", "Line Speed": "0.5 to 10 m/min", "Motor": "3HP to 20HP", "Power Supply": "415V 3-phase", "Protection": "IP54" }
+  },
+  {
+    id: "zeroSpeedSwitch",
     name: "Zero Speed Switch",
     shortDescription: "Detects underspeed conditions in rotating equipment and conveyors.",
     description: "The Zero Speed Switch is an electronic speed monitoring device that detects underspeed or zero-speed conditions in rotating machinery. It provides early warning of belt slippage, motor failure, or mechanical blockages, helping prevent costly equipment damage.",
@@ -56,135 +329,5 @@ export const products: Product[] = [
     features: ["Adjustable speed threshold", "Pulse sensing technology", "Time delay adjustment", "LED speed indication", "Relay output", "Compact design"],
     applications: ["Conveyor belt monitoring", "Bucket elevators", "Rotary kilns", "Crushers & screens", "Fan & blower systems", "Screw conveyors"],
     specifications: { "Sensing Method": "Magnetic proximity", "Speed Range": "0.5 to 3000 RPM", "Time Delay": "1 to 30 seconds", "Supply Voltage": "24V DC / 230V AC", "Output": "DPDT Relay", "Protection Rating": "IP65" }
-  },
-  {
-    id: "belt-tear-switch",
-    name: "Belt Tear Switch",
-    shortDescription: "Detects conveyor belt tears and rips to prevent catastrophic damage.",
-    description: "The Belt Tear Switch is designed to detect longitudinal rips or tears in conveyor belts. When a tear occurs, the sensor detects material spillage or belt deformation and immediately triggers a shutdown, preventing catastrophic belt damage and material loss.",
-    image: beltTearSwitch,
-    features: ["High sensitivity detection", "Quick response time", "Robust construction", "Manual reset option", "Weather-proof housing", "Easy calibration"],
-    applications: ["Mining conveyors", "Coal handling plants", "Ore processing", "Port bulk terminals", "Quarry operations", "Steel plant conveyors"],
-    specifications: { "Detection Method": "Mechanical lever", "Housing Material": "Cast aluminum", "Protection Rating": "IP65", "Contact Rating": "10A @ 240V AC", "Response Time": "<100ms", "Operating Temperature": "-20°C to +65°C" }
-  },
-  {
-    id: "limit-switch",
-    name: "Limit Switch",
-    shortDescription: "Heavy-duty limit switches for position detection and machine control.",
-    description: "Our Industrial Limit Switches are precision-engineered position-sensing devices used for detecting the presence, absence, or position of an object. They are essential for machine control, safety interlocking, and process automation in demanding industrial environments.",
-    image: limitSwitch,
-    features: ["Multiple actuator types available", "Snap-action contacts", "High mechanical durability", "IP67 protection", "Wide temperature range", "Compact footprint"],
-    applications: ["CNC machines", "Packaging equipment", "Material handling", "Automated doors & gates", "Crane & hoist systems", "Robotics"],
-    specifications: { "Contact Configuration": "SPDT / DPDT", "Mechanical Life": "10 million operations", "Electrical Rating": "10A @ 250V AC", "Protection Rating": "IP67", "Operating Temperature": "-25°C to +80°C", "Actuator Types": "Roller, plunger, lever" }
-  },
-  {
-    id: "safety-switch",
-    name: "Safety Switch",
-    shortDescription: "Electrical safety interlock switches for machine guarding applications.",
-    description: "Safety Switches provide reliable safety interlocking for machine guards, access doors, and protective barriers. They ensure that hazardous machinery cannot operate when guards are open, protecting personnel from injury.",
-    image: safetySwitch,
-    features: ["Positive break contacts", "Tamper-proof design", "Multiple key patterns", "Door monitoring capability", "Solenoid locking option", "Category 4 safety rating"],
-    applications: ["Machine guarding", "Access door interlocking", "Conveyor covers", "Robot cell fencing", "Packaging machines", "Printing presses"],
-    specifications: { "Safety Category": "Cat 4 / PLe", "Contact Configuration": "2NC + 1NO", "Mechanical Life": "5 million operations", "Protection Rating": "IP67", "Locking Force": "2000N (solenoid)", "Operating Voltage": "24V DC / 230V AC" }
-  },
-  {
-    id: "industrial-thermostat",
-    name: "Industrial Thermostat",
-    shortDescription: "Precision temperature control for industrial heating and cooling systems.",
-    description: "Our Industrial Thermostats provide accurate and reliable temperature regulation for a wide range of industrial heating and cooling applications. Built with robust construction, they deliver consistent temperature control in demanding environments.",
-    image: industrialThermostat,
-    features: ["Wide temperature range", "High accuracy ±1°C", "Adjustable setpoint", "Heavy-duty contacts", "Surface & immersion types", "Quick thermal response"],
-    applications: ["Industrial ovens", "Heat treatment furnaces", "HVAC systems", "Water heating systems", "Oil heating", "Process heating"],
-    specifications: { "Temperature Range": "-30°C to +300°C", "Accuracy": "±1°C", "Sensor Type": "Capillary / Bimetal", "Contact Rating": "16A @ 250V AC", "Differential": "Adjustable 2-10°C", "Housing": "ABS / Metal" }
-  },
-  {
-    id: "temperature-controller",
-    name: "Temperature Controller",
-    shortDescription: "PID temperature controllers for precise process temperature management.",
-    description: "Our Temperature Controllers offer advanced PID control algorithms for precise temperature regulation in industrial processes. With digital displays, multiple input types, and versatile output options, they ensure optimal temperature management.",
-    image: temperatureController,
-    features: ["PID auto-tune function", "Multiple input types", "Dual display (SV/PV)", "Alarm outputs", "RS485 communication", "Ramp & soak programming"],
-    applications: ["Plastic extrusion", "Injection molding", "Heat treatment", "Food processing", "Packaging machines", "Laboratory equipment"],
-    specifications: { "Input Types": "TC (K, J, T, E, S, R), RTD (PT100)", "Control Output": "Relay / SSR / 4-20mA", "Display": "Dual 4-digit LED", "Accuracy": "±0.3% FS", "Power Supply": "85-265V AC", "Panel Cutout": "45x45mm / 48x96mm" }
-  },
-  {
-    id: "industrial-heater",
-    name: "Industrial Heater",
-    shortDescription: "High-performance heating elements for industrial applications.",
-    description: "Our Industrial Heaters are engineered for demanding heating applications across various industries. From tubular heaters to strip heaters and cartridge heaters, we provide solutions for every heating challenge with superior heat transfer and longevity.",
-    image: industrialHeater,
-    features: ["High watt density", "Corrosion-resistant materials", "Custom configurations", "Uniform heat distribution", "Long operational life", "Multiple termination options"],
-    applications: ["Oil & gas heating", "Chemical processing", "Food industry", "Plastic machinery", "Textile industry", "Water heating"],
-    specifications: { "Heater Types": "Tubular, cartridge, strip, band", "Wattage Range": "100W to 50kW", "Sheath Material": "SS304 / SS316 / Incoloy", "Max Temperature": "Up to 750°C", "Voltage": "230V / 415V AC", "Custom Lengths": "50mm to 6000mm" }
-  },
-  {
-    id: "control-panel",
-    name: "Control Panel",
-    shortDescription: "Custom-built electrical control panels for industrial automation.",
-    description: "We design and manufacture custom electrical control panels for industrial automation and process control. Our panels are built to the highest standards with quality components, ensuring reliable and safe operation of your industrial systems.",
-    image: controlPanel,
-    features: ["Custom-engineered designs", "PLC/SCADA integration", "IP55/IP65 enclosures", "UL/CE compliant", "Touch screen HMI option", "Remote monitoring capability"],
-    applications: ["Process automation", "Motor control centers", "Power distribution", "HVAC controls", "Water treatment", "Manufacturing lines"],
-    specifications: { "Enclosure Rating": "IP55 / IP65", "Sheet Thickness": "2mm CRCA / SS", "Standards": "IEC 61439, IS 8623", "Voltage Rating": "Up to 690V AC", "Bus Bar": "Copper / Aluminum", "Painting": "Powder coated RAL 7035" }
-  },
-  {
-    id: "industrial-sensors",
-    name: "Industrial Sensors",
-    shortDescription: "Precision sensors for position, proximity, and level detection.",
-    description: "Our range of Industrial Sensors covers proximity, photoelectric, ultrasonic, and capacitive sensing technologies. These sensors provide reliable detection and measurement in automated manufacturing and process control environments.",
-    image: industrialSensors,
-    features: ["Multiple sensing technologies", "High repeat accuracy", "Extended sensing range", "IO-Link compatible", "LED status indicators", "Robust metal housings"],
-    applications: ["Automated assembly lines", "Packaging machines", "Material handling", "Liquid level detection", "Object counting", "Position verification"],
-    specifications: { "Sensing Types": "Inductive, capacitive, photoelectric", "Sensing Range": "1mm to 15m (type dependent)", "Output Types": "PNP/NPN, 4-20mA, analog", "Supply Voltage": "10-30V DC", "Protection Rating": "IP67 / IP69K", "Response Time": "< 1ms" }
-  },
-  {
-    id: "level-switch",
-    name: "Level Switch",
-    shortDescription: "Reliable level detection for liquids, solids, and slurries.",
-    description: "Our Level Switches provide reliable point-level detection for liquids, powders, and granular solids. Using various sensing technologies including float, vibrating fork, and capacitive methods, they ensure accurate level monitoring in tanks and silos.",
-    image: levelSwitch,
-    features: ["Multiple sensing technologies", "Intrinsically safe options", "High/low level detection", "Fail-safe operation", "No moving parts (vibrating fork)", "Self-diagnostic capability"],
-    applications: ["Water & wastewater treatment", "Chemical storage tanks", "Food & beverage processing", "Pharmaceutical industry", "Oil & gas", "Silo level monitoring"],
-    specifications: { "Types": "Float, vibrating fork, capacitive, RF", "Process Temperature": "-40°C to +250°C", "Process Pressure": "Up to 40 bar", "Output": "Relay SPDT / PNP / NAMUR", "Connection": "Threaded / Flanged", "Approvals": "ATEX, IECEx (optional)" }
-  },
-  {
-    id: "rotary-switch",
-    name: "Rotary Switch",
-    shortDescription: "Multi-position rotary switches for circuit selection and control.",
-    description: "Our Rotary Switches offer reliable multi-position switching for industrial control panels and machinery. Available in various configurations, they provide safe and durable circuit selection for motor control, lighting, and instrumentation applications.",
-    image: rotarySwitch,
-    features: ["Multiple position options", "Panel & base mounting", "Padlockable handle", "IP65 protection", "Arc-resistant housing", "Color-coded markings"],
-    applications: ["Motor changeover", "Generator changeover", "Voltmeter selection", "Ammeter selection", "Star-delta starting", "Lighting control"],
-    specifications: { "Current Rating": "16A to 125A", "Voltage Rating": "Up to 690V AC", "Positions": "2, 3, 4 position", "Poles": "1P to 4P", "Mounting": "Panel / base / DIN rail", "Protection": "IP65 (with enclosure)" }
-  },
-  {
-    id: "digital-temperature-controller",
-    name: "Digital Temperature Controller",
-    shortDescription: "Advanced digital controllers with programmable features and communication.",
-    description: "Our Digital Temperature Controllers feature advanced microprocessor-based control with programmable profiles, data logging, and communication capabilities. They are ideal for applications requiring precise, repeatable temperature control with process documentation.",
-    image: digitalTempController,
-    features: ["Programmable ramp/soak profiles", "Data logging function", "Ethernet/Modbus communication", "Multi-zone control option", "Touch-screen models available", "Recipe storage"],
-    applications: ["Heat treatment furnaces", "Environmental chambers", "Ceramic kilns", "Glass processing", "Semiconductor manufacturing", "Research laboratories"],
-    specifications: { "Input Types": "TC, RTD, mV, mA, V", "Control Modes": "PID, ON/OFF, Manual", "Programs": "Up to 99 segments", "Communication": "RS485 Modbus / Ethernet", "Display": "Color LCD / LED", "Accuracy": "±0.2% FS ±1 digit" }
-  },
-  {
-    id: "conveyor-safety-switch",
-    name: "Conveyor Safety Switch",
-    shortDescription: "Comprehensive safety switching for conveyor belt protection systems.",
-    description: "The Conveyor Safety Switch is a robust emergency stop device specifically designed for conveyor belt installations. It provides immediate emergency stopping capability and is an essential component of any conveyor safety system, meeting international safety standards.",
-    image: conveyorSafetySwitch,
-    features: ["Emergency stop function", "Maintained contacts", "High visibility red button", "Stainless steel actuator", "Quick disconnect cable", "Status indication LED"],
-    applications: ["Coal conveyors", "Aggregate conveyors", "Food processing lines", "Airport baggage handling", "Distribution centers", "Recycling facilities"],
-    specifications: { "Contact Configuration": "2NC + 2NO", "Current Rating": "10A @ 240V AC", "Protection Rating": "IP66", "Reset Type": "Manual key reset", "Housing Material": "Glass-filled polyester", "Cable Entry": "M20 / PG13.5" }
-  },
-  {
-    id: "industrial-control-system",
-    name: "Industrial Control System",
-    shortDescription: "Integrated control systems for complete industrial automation solutions.",
-    description: "Our Industrial Control Systems provide comprehensive automation solutions combining PLC programming, SCADA systems, and DCS architecture. We deliver turnkey control system solutions tailored to your specific process requirements.",
-    image: industrialControlSystem,
-    features: ["PLC-based architecture", "SCADA integration", "Remote access capability", "Redundant controllers", "Historical data trending", "Alarm management system"],
-    applications: ["Process industries", "Power generation", "Water treatment plants", "Manufacturing automation", "Building management", "Energy management"],
-    specifications: { "PLC Brands": "Siemens, Allen-Bradley, Mitsubishi", "I/O Capacity": "Scalable up to 10,000+ points", "Communication": "Profinet, Ethernet/IP, Modbus", "HMI": "7\" to 22\" touch panels", "Programming": "IEC 61131-3", "Redundancy": "Hot standby CPU option" }
   }
 ];

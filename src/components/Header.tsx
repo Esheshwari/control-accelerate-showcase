@@ -15,9 +15,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-md gradient-industrial flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg" style={{ fontFamily: "var(--font-heading)" }}>CA</span>
-          </div>
+          <img src="/logo.png" alt="Control & Accelerate Logo" className="w-10 h-10 rounded-md" />
           <div className="leading-tight">
             <span className="font-bold text-foreground text-sm md:text-base" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate</span>
             <span className="block text-xs text-muted-foreground">India</span>
@@ -29,7 +27,7 @@ const Header = () => {
           <button onClick={() => scrollTo("products")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">Products</button>
           <button onClick={() => scrollTo("about")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">About</button>
           <button onClick={() => scrollTo("contact")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">Contact</button>
-          <a href="tel:+911234567890" className="btn-industrial px-4 py-2 text-sm gap-2">
+          <a href="tel:+91 95704 05891" className="btn-industrial px-4 py-2 text-sm gap-2">
             <Phone className="w-4 h-4" /> Get a Quote
           </a>
         </nav>
@@ -46,7 +44,7 @@ const Header = () => {
             <button onClick={() => scrollTo("products")} className="text-sm font-medium py-2 text-left">Products</button>
             <button onClick={() => scrollTo("about")} className="text-sm font-medium py-2 text-left">About</button>
             <button onClick={() => scrollTo("contact")} className="text-sm font-medium py-2 text-left">Contact</button>
-            <a href="tel:+911234567890" className="btn-industrial px-4 py-2 text-sm text-center gap-2">
+            <a href="tel:+91 95704 05891" className="btn-industrial px-4 py-2 text-sm text-center gap-2">
               <Phone className="w-4 h-4" /> Get a Quote
             </a>
           </div>

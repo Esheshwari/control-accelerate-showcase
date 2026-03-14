@@ -1,12 +1,15 @@
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 import { ArrowLeft, CheckCircle, Send } from "lucide-react";
 import { products } from "@/data/products";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ContactFormModal from "@/components/ContactFormModal";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
+  const [modalOpen, setModalOpen] = useState(false);
 
   if (!product) {
     return (
@@ -58,9 +61,9 @@ const ProductDetail = () => {
                 ))}
               </div>
 
-              <a href="#contact" className="btn-industrial px-6 py-3 text-sm gap-2">
+              <button onClick={() => setModalOpen(true)} className="btn-industrial px-6 py-3 text-sm gap-2 inline-flex items-center">
                 <Send className="w-4 h-4" /> Enquire Now
-              </a>
+              </button>
             </div>
           </div>
 
@@ -83,6 +86,7 @@ const ProductDetail = () => {
         </div>
       </main>
       <Footer />
+      <ContactFormModal open={modalOpen} setOpen={setModalOpen} productName={product.name} />
     </>
   );
 };

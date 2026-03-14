@@ -21,9 +21,10 @@ const Footer = () => (
         <div>
           <h4 className="font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>Contact Info</h4>
           <div className="flex flex-col gap-3 text-sm opacity-80">
-            <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 12345 67890</span>
-            <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@controlandaccelerate.in</span>
-            <span className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5" /> Industrial Area, New Delhi, India</span>
+            <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 95704 05891 / 99313 78518 / 89879 16181</span>
+            <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@controlandaccelerate.com</span>
+            <span className="flex items-start gap-2"><MapPin className="w-4 h-4" /> Registered Office Address :- 515, Industrial Area, Bahuarwa, Near Ashoka Pillar, Lauria,
+West Champaran, Bihar - India</span>
           </div>
         </div>
       </div>

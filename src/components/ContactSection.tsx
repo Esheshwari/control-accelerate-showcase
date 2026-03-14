@@ -27,21 +27,22 @@ const ContactSection = () => {
               <Phone className="w-5 h-5 text-primary mt-0.5" />
               <div>
                 <h4 className="font-semibold text-sm text-foreground">Phone</h4>
-                <p className="text-sm text-muted-foreground">+91 12345 67890</p>
+                <p className="text-sm text-muted-foreground">+91 95704 05891 / 99313 78518 / 89879 16181</p>
               </div>
             </div>
             <div className="card-industrial p-5 flex items-start gap-3">
               <Mail className="w-5 h-5 text-primary mt-0.5" />
               <div>
                 <h4 className="font-semibold text-sm text-foreground">Email</h4>
-                <p className="text-sm text-muted-foreground">info@controlandaccelerate.in</p>
+                <p className="text-sm text-muted-foreground">info@controlaccelerate.com</p>
               </div>
             </div>
             <div className="card-industrial p-5 flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary mt-0.5" />
               <div>
                 <h4 className="font-semibold text-sm text-foreground">Address</h4>
-                <p className="text-sm text-muted-foreground">Industrial Area, Phase II, New Delhi, India - 110020</p>
+                <p className="text-sm text-muted-foreground">Registered Office Address :- 515, Industrial Area, Bahuarwa, Near Ashoka Pillar, Lauria,
+West Champaran, Bihar - India</p>
               </div>
             </div>
           </div>
