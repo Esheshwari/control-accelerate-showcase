@@ -15,7 +15,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="section-container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="Control & Accelerate Logo" className="w-10 h-10 rounded-md" />
+          <img src="/logo-images.png" alt="Control & Accelerate Logo" className="w-10 h-10 rounded-md" />
           <div className="leading-tight">
             <span className="font-bold text-foreground text-sm md:text-base" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate</span>
             <span className="block text-xs text-muted-foreground">India</span>

@@ -7,12 +7,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[85vh] flex items-center" style={{ marginTop: "80px" }}>
+    <section className="relative min-h-[60vh] flex items-center" style={{ marginTop: "80px" }}>
       <div className="absolute inset-0">
         <img src={heroBg} alt="Industrial facility" className="w-full h-full object-cover" />
         <div className="absolute inset-0 gradient-hero-overlay" />
       </div>
-      <div className="relative section-container py-20">
+      <div className="relative section-container py-12">
         <div className="max-w-2xl">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6"
             style={{ background: "hsl(var(--teal-glow) / 0.2)", color: "hsl(var(--teal-glow))", fontFamily: "var(--font-heading)" }}>
