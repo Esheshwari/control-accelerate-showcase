@@ -27,7 +27,7 @@ import waveSling from "@/assets/products/wave sling.jpg";
 import weldingDistributionBox from "@/assets/products/welding-distribution-box.jpg";
 import winchMachine from "@/assets/products/winch machine.jpg";
 import zeroSpeedSwitch from "@/assets/products/zero-speed-switch.jpg";
-import industrialCoolingFan from "@/assets/products/industrial-cooling-fan.jpg";
+import industrialCoolingFan from "@/assets/products/industrial-cooling-fan.png";
 import infraredTemperatureSensor from "@/assets/products/Infrared-temperature-sensor.jpg";
 import pressureTransmitter from "@/assets/products/monocrystalline-silicon-pressure-transmitter.jpg";
 import springBalancer from "@/assets/products/spring-balancer.jpg";
