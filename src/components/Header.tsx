@@ -19,7 +19,7 @@ const Header = () => {
           <div className="leading-tight">
             <span className="font-bold text-foreground text-sm md:text-base" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate</span>
             <span className="block text-xs text-muted-foreground">India</span>
-          </div>
+          </div>                                                                                                                                                                                                                                                                                                                   
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
