@@ -23,7 +23,7 @@ const HeroSection = () => {
             Industrial Safety Systems & Electrical Control Solutions
           </h1>
           <p className="text-lg md:text-xl mb-8" style={{ color: "rgba(255,255,255,0.85)" }}>
-            We provide reliable electrical and mechanical solutions for industries that demand consistent performance. Designed for real-world conditions, our systems ensure durability, safety, and efficiency. By combining precision and strength, we help reduce downtime and improve operations. We deliver quality solutions you can depend on—because reliability is essential to your success.
+            We provide reliable electrical and mechanical solutions for industries that demand consistent performance. Designed for real-world conditions, our systems ensure durability, safety, and efficiency. By combining precision and strength, we help reduce downtime and improve operations. We deliver quality solutions you can depend on - because reliability is essential to your success.
           </p>
           <div className="flex flex-wrap gap-4">
             <button onClick={scrollToProducts} className="btn-industrial px-8 py-3 text-base gap-2">
