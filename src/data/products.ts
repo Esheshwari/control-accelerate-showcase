@@ -31,6 +31,8 @@ import industrialCoolingFan from "@/assets/products/industrial-cooling-fan.png";
 import infraredTemperatureSensor from "@/assets/products/Infrared-temperature-sensor.jpg";
 import pressureTransmitter from "@/assets/products/monocrystalline-silicon-pressure-transmitter.jpg";
 import springBalancer from "@/assets/products/spring-balancer.jpg";
+import highPressurePistonRegulator from "@/assets/products/High Pressure Piston type Regulator S. S. Body.jpg";
+
 
 export interface Product {
   id: string;
@@ -961,6 +963,35 @@ export const products: Product[] = [
       "Wetted Materials": "316L Stainless Steel / Hastelloy C-276",
       "Safety Certs": "SIL2 / Explosion-proof (Ex db IIC T6 Gb)",
       "Filling Liquid": "Silicone oil / Fluorinated oil"
+    }
+  },
+  {
+    id: "high-pressure-piston-regulator",
+    name: "High Pressure Piston type Regulator (S.S. Body)",
+    shortDescription: "Precision pressure control for high-pressure gas and fluid systems.",
+    description: "Designed for precise control of gas or fluid pressure in high-pressure environments. This regulator features a precision-machined stainless steel piston sensing mechanism, which provides superior strength and stability compared to diaphragm-type regulators, ensuring minimal downstream fluctuation.",
+    image: highPressurePistonRegulator,
+    features: [
+      "SS316/SS304 Stainless Steel housing for high-pressure durability",
+      "Precision-machined piston sensing element for better strength",
+      "Stable downstream pressure with minimal fluctuation",
+      "Compatible with high inlet pressures up to 280 kg/cm²",
+      "Robust construction for industrial gas and fluid control"
+    ],
+    applications: [
+      "High-pressure gas cylinder regulation",
+      "Industrial fluid pressure control",
+      "Laboratory gas manifold systems",
+      "Pneumatic and hydraulic test benches"
+    ],
+    specifications: {
+      "Body Material": "Stainless Steel (SS316 / SS304)",
+      "Sensing Element": "Piston Type",
+      "Inlet Pressure Gauge": "0-280 kg/cm²",
+      "Outlet Pressure Gauge": "0-150 kg/cm²",
+      "Inlet Connection": "5/8\" BSP Male (RHT) / LHT (H2)",
+      "Outlet Connection": "1/4\" OD with fitting 1/4\" x 1/2\"",
+      "Operating Medium": "Gas or Fluid"
     }
   }
 
