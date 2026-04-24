@@ -1,14 +1,41 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", product: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! Your enquiry has been submitted. We will contact you shortly.");
-    setForm({ name: "", email: "", phone: "", product: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS configuration
+      const serviceId = 'service_gtuexis';
+      const templateId = 'template_q5nl2za';
+      const publicKey = 'FfGvxREdE92gMo69h';
+
+      const templateParams = {
+        from_name: form.name,
+        from_email: form.email,
+        phone: form.phone,
+        product: form.product,
+        message: form.message,
+        to_email: 'shapersindustrial@gmail.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      toast.success("Thank you! Your enquiry has been submitted. We will contact you shortly.");
+      setForm({ name: "", email: "", phone: "", product: "", message: "" });
+    } catch (error) {
+      console.error('Email send error:', error);
+      toast.error("Failed to send enquiry. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -61,8 +88,8 @@ West Champaran, Bihar - India</p>
             </div>
             <textarea required rows={4} placeholder="Your Message / Requirements" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
               className="w-full px-4 py-2.5 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none" />
-            <button type="submit" className="btn-industrial px-6 py-3 text-sm gap-2 self-start">
-              <Send className="w-4 h-4" /> Send Enquiry
+            <button type="submit" className="btn-industrial px-6 py-3 text-sm gap-2 self-start" disabled={isSubmitting}>
+              <Send className="w-4 h-4" /> {isSubmitting ? "Sending..." : "Send Enquiry"}
             </button>
           </form>
         </div>

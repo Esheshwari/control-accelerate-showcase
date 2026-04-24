@@ -1,7 +1,10 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-import { ArrowLeft, CheckCircle, Send } from "lucide-react";
+import { ArrowLeft, CheckCircle, Send, ShoppingCart } from "lucide-react";
 import { products } from "@/data/products";
+import { useAuth } from "@/contexts/AuthContext";
+import { useCart } from "@/contexts/CartContext";
+import { toast } from "sonner";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactFormModal from "@/components/ContactFormModal";
@@ -10,6 +13,8 @@ const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
   const [modalOpen, setModalOpen] = useState(false);
+  const { isAuthenticated } = useAuth();
+  const { addToCart } = useCart();
 
   if (!product) {
     return (
@@ -25,6 +30,14 @@ const ProductDetail = () => {
       </>
     );
   }
+
+  const handleAddToCart = () => {
+    if (!isAuthenticated) {
+      toast.error("Please sign in to add items to cart");
+      return;
+    }
+    addToCart(product);
+  };
 
   return (
     <>
@@ -61,9 +74,18 @@ const ProductDetail = () => {
                 ))}
               </div>
 
-              <button onClick={() => setModalOpen(true)} className="btn-industrial px-6 py-3 text-sm gap-2 inline-flex items-center">
-                <Send className="w-4 h-4" /> Enquire Now
-              </button>
+              <div className="flex gap-3">
+                <button onClick={() => setModalOpen(true)} className="btn-industrial px-6 py-3 text-sm gap-2 inline-flex items-center">
+                  <Send className="w-4 h-4" /> Enquire Now
+                </button>
+                <button
+                  onClick={handleAddToCart}
+                  className="btn-industrial px-6 py-3 text-sm gap-2 inline-flex items-center"
+                  title={isAuthenticated ? "Add to Cart" : "Sign in to add to cart"}
+                >
+                  <ShoppingCart className="w-4 h-4" /> Add to Cart
+                </button>
+              </div>
             </div>
           </div>
 

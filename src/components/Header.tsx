@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ShoppingCart, User, LogOut } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
+import { useCart } from "@/contexts/CartContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user, logout, isAuthenticated } = useAuth();
+  const { getTotalItems } = useCart();
 
   const scrollTo = (id: string) => {
     setIsOpen(false);
@@ -19,8 +23,7 @@ const Header = () => {
           <div className="leading-tight">
             <span className="font-bold text-foreground text-sm md:text-base" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate</span>
             <span className="block text-xs text-muted-foreground">India</span>
-          </div> 
-                                                                                                                                                                                                                                                                                                                            
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -28,6 +31,35 @@ const Header = () => {
           <button onClick={() => scrollTo("products")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">Products</button>
           <button onClick={() => scrollTo("about")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">About</button>
           <button onClick={() => scrollTo("contact")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">Contact</button>
+          <div className="flex items-center gap-4">
+            {/* Cart Icon */}
+            <Link to="/cart" className="relative text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <ShoppingCart className="w-5 h-5" />
+              {getTotalItems() > 0 && (
+                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  {getTotalItems()}
+                </span>
+              )}
+            </Link>
+            {/* Auth Buttons */}
+            {isAuthenticated ? (
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-muted-foreground">Hi, {user?.name}</span>
+                <button
+                  onClick={logout}
+                  className="text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1"
+                >
+                  <LogOut className="w-4 h-4" />
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+                <Link to="/login" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Sign In</Link>
+                <Link to="/register" className="btn-industrial px-3 py-1.5 text-sm">Register</Link>
+              </div>
+            )}
+          </div>
           <a href="tel:+91 95704 05891" className="btn-industrial px-4 py-2 text-sm gap-2">
             <Phone className="w-4 h-4" /> Get a Quote
           </a>
@@ -45,6 +77,27 @@ const Header = () => {
             <button onClick={() => scrollTo("products")} className="text-sm font-medium py-2 text-left">Products</button>
             <button onClick={() => scrollTo("about")} className="text-sm font-medium py-2 text-left">About</button>
             <button onClick={() => scrollTo("contact")} className="text-sm font-medium py-2 text-left">Contact</button>
+            <Link to="/cart" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2 flex items-center gap-2">
+              <ShoppingCart className="w-4 h-4" />
+              Cart ({getTotalItems()})
+            </Link>
+            {isAuthenticated ? (
+              <>
+                <span className="text-sm text-muted-foreground py-2">Hi, {user?.name}</span>
+                <button
+                  onClick={() => { logout(); setIsOpen(false); }}
+                  className="text-sm font-medium py-2 text-left flex items-center gap-2"
+                >
+                  <LogOut className="w-4 h-4" />
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2">Sign In</Link>
+                <Link to="/register" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2">Register</Link>
+              </>
+            )}
             <a href="tel:+91 95704 05891" className="btn-industrial px-4 py-2 text-sm text-center gap-2">
               <Phone className="w-4 h-4" /> Get a Quote
             </a>
