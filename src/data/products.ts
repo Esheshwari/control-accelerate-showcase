@@ -42,6 +42,7 @@ export interface Product {
   image: string;
   features: string[];
   applications: string[];
+  usage: string[];
   specifications: Record<string, string>;
 }
 
@@ -61,6 +62,12 @@ export const products: Product[] = [
       "Latching operation mode"
     ],
     applications: [
+      "Belt Conveyor Systems",
+      "Mining and Quarrying",
+      "Bulk Material Handling",
+      "Packaging Lines"
+    ],
+    usage: [
       "Belt Conveyor Systems",
       "Mining and Quarrying",
       "Bulk Material Handling",
@@ -98,6 +105,12 @@ export const products: Product[] = [
       "Automated Warehouses",
       "Rail-mounted machinery"
     ],
+    usage: [
+      "Overhead Traveling Cranes (EOT)",
+      "Gantry Cranes",
+      "Automated Warehouses",
+      "Rail-mounted machinery"
+    ],
     specifications: {
       "Sensor Type": "Infrared (IR)",
       "Range": "Up to 10 Meters",
@@ -111,9 +124,9 @@ export const products: Product[] = [
   },
 {
     id: "zero-speed-switch",
-    name: "Zero Speed Switch (CAI-ZSS-226)",
+    name: "Zero Speed Switch",
     shortDescription: "Motion detection and interlock protection for rotating equipment.",
-    description: "The CAI-ZSS-226 detects the absence of motion (zero or low speed) in rotating industrial equipment using pulse input or magnetic/inductive sensing. It provides dry relay contact outputs for critical control, alarm, and interlock protection to prevent machine damage during stalls or slips.",
+    description: "This zero speed switch detects the absence of motion (zero or low speed) in rotating industrial equipment using pulse input or magnetic/inductive sensing. It provides dry relay contact outputs for critical control, alarm, and interlock protection to prevent machine damage during stalls or slips.",
     image: zeroSpeedSwitch,
     features: [
       "Adjustable Startup Timer (1–30s) to avoid nuisance trips",
@@ -128,8 +141,14 @@ export const products: Product[] = [
       "Bucket elevator protection",
       "Rotary kiln speed monitoring"
     ],
+    usage: [
+      "Conveyor slip detection",
+      "Crusher and mixer monitoring",
+      "Bucket elevator protection",
+      "Rotary kiln speed monitoring"
+    ],
     specifications: {
-      "Model": "CAI-ZSS-226",
+      "Model": "Standard industrial configuration",
       "Supply Voltage": "AC 110–230 V / DC 6–36 V",
       "Speed Range": "0 – 5000 RPM",
       "Output Contacts": "Multiple (e.g., 2NO + 2NC) @ 5A 230V AC",
@@ -141,7 +160,7 @@ export const products: Product[] = [
   },
   {
     id: "pull-cord-rope",
-    name: "Pull Cord Rope (CAI-PCR-225)",
+    name: "Pull Cord Rope",
     shortDescription: "High-visibility, low-stretch safety rope for emergency stop activation.",
     description: "An essential accessory for conveyor safety, this high-visibility rope is installed along the full length of the conveyor. When pulled, it instantly activates the pull cord switch to ensure the immediate shutdown of equipment and protection of personnel.",
     image: pullCordRope,
@@ -158,8 +177,14 @@ export const products: Product[] = [
       "Mining and bulk handling sites",
       "Outdoor material transport"
     ],
+    usage: [
+      "Belt conveyor safety lines",
+      "Industrial production lines",
+      "Mining and bulk handling sites",
+      "Outdoor material transport"
+    ],
     specifications: {
-      "Model": "CAI-PCR-225",
+      "Model": "Standard industrial configuration",
       "MOC": "Steel Wire Rope with PVC Insulation",
       "Diameter": "4 mm / 5 mm / 6 mm",
       "Breaking Strength": "300 – 800 kg (diameter dependent)",
@@ -171,7 +196,7 @@ export const products: Product[] = [
   },
   {
     id: "industrial-carbon-brush",
-    name: "Industrial Carbon Brush (CAI-J2204)",
+    name: "Industrial Carbon Brush",
     shortDescription: "High-performance electrical current transfer for rotating machines.",
     description: "Precision-molded carbon brushes designed for stable, low-sparking commutation in motors and generators. Available in multiple grades like Metal Graphite and Silver Graphite to suit specific conductivity and friction requirements.",
     image: industrialCarbonBrush,
@@ -188,8 +213,14 @@ export const products: Product[] = [
       "Heavy-duty rotating machines",
       "Wind turbine generators"
     ],
+    usage: [
+      "Industrial Motors & Generators",
+      "Alternators and Slip Rings",
+      "Heavy-duty rotating machines",
+      "Wind turbine generators"
+    ],
     specifications: {
-      "Model/Grade": "CAI-J2204 (Metal Graphite)",
+      "Model/Grade": "Metal Graphite",
       "Resistivity": "0.62 μΩ·m",
       "Flexural Strength": "42 MPa",
       "Hardness": "~Rockwell 89",
@@ -201,7 +232,7 @@ export const products: Product[] = [
   },
   {
     id: "belt-sway-switch",
-    name: "Belt Sway Switch (CAI-BSS-221)",
+    name: "Belt Sway Switch",
     shortDescription: "Conveyor belt alignment monitoring and damage prevention.",
     description: "A safety device that monitors belt alignment to prevent damage caused by deviation or excessive sway. If the belt edge deflects beyond the preset angle, the switch triggers an alarm or stops the conveyor to prevent material spillage and accidents.",
     image: beltSwaySwitch,
@@ -218,8 +249,14 @@ export const products: Product[] = [
       "Power plant coal handling",
       "Port and terminal bulk handling"
     ],
+    usage: [
+      "Mining conveyor systems",
+      "Cement and steel plant conveyors",
+      "Power plant coal handling",
+      "Port and terminal bulk handling"
+    ],
     specifications: {
-      "Model": "CAI-BSS-221",
+      "Model": "Standard industrial configuration",
       "Operating Principle": "Tilt sensing via roller/lever",
       "Switching Angles": "Maximum 70°",
       "Operating Torque": "3.4 – 5.4 Nm",
@@ -231,9 +268,9 @@ export const products: Product[] = [
   },
   {
     id: "electro-hydraulic-thruster",
-    name: "Electro-Hydraulic Thruster (CAI-EHT-222)",
+    name: "Electro-Hydraulic Thruster",
     shortDescription: "Self-contained drive unit for linear mechanical motion and braking.",
-    description: "The CAI-EHT-222 is a self-contained unit that converts electrical energy into hydraulic pressure to produce precise linear motion. It is engineered for heavy-duty industrial applications such as operating drum brakes, disc brakes, gates, and dampers.",
+    description: "This self-contained electro-hydraulic thruster converts electrical energy into hydraulic pressure to produce precise linear motion. It is engineered for heavy-duty industrial applications such as operating drum brakes, disc brakes, gates, and dampers.",
     image: electricHydraulicThruster,
     features: [
       "Self-contained oil-filled system with sealed hydraulic circuit",
@@ -248,8 +285,14 @@ export const products: Product[] = [
       "Lifting mechanisms",
       "Moving machinery control"
     ],
+    usage: [
+      "Industrial Drum and Disc Brakes",
+      "Gate and Damper operation",
+      "Lifting mechanisms",
+      "Moving machinery control"
+    ],
     specifications: {
-      "Model": "CAI-EHT-222",
+      "Model": "Standard industrial configuration",
       "Rated Voltage": "415 V AC ±10% (3 Phase)",
       "Power Rating": "0.18 kW to 2.2 kW",
       "Stroke Length": "25 mm to 120 mm",
@@ -278,6 +321,12 @@ export const products: Product[] = [
       "Actuator positioning",
       "Variable speed drive interface"
     ],
+    usage: [
+      "Crane and Hoist controls",
+      "Material handling equipment",
+      "Actuator positioning",
+      "Variable speed drive interface"
+    ],
     specifications: {
       "Rated Voltage": "24 V DC / 110 Vac / 220 Vac",
       "Rated Current": "5 A (max per contact)",
@@ -301,6 +350,12 @@ export const products: Product[] = [
       "Integrated lid to reduce heat loss and drought"
     ],
     applications: [
+      "Viscosity control of oils and chemicals",
+      "Food processing (melting fats/syrups)",
+      "Industrial paint and resin heating",
+      "Chemical storage maintenance"
+    ],
+    usage: [
       "Viscosity control of oils and chemicals",
       "Food processing (melting fats/syrups)",
       "Industrial paint and resin heating",
@@ -337,6 +392,12 @@ export const products: Product[] = [
       "Load bank simulation",
       "Speed control for heavy motors"
     ],
+    usage: [
+      "Slip ring motor starting",
+      "Dynamic braking resistors",
+      "Load bank simulation",
+      "Speed control for heavy motors"
+    ],
     specifications: {
       "Range (per phase)": "0.1 Ω to 50 Ω",
       "No of Steps": "3 / 4 / 5 / 6 / Up to 12 Step",
@@ -359,6 +420,12 @@ export const products: Product[] = [
       "FRP/PVC insulation for durability"
     ],
     applications: [
+      "EOT Cranes and Hoists",
+      "Monorails and Conveyors",
+      "Shuttle Conveyors",
+      "Moving industrial machinery"
+    ],
+    usage: [
       "EOT Cranes and Hoists",
       "Monorails and Conveyors",
       "Shuttle Conveyors",
@@ -392,6 +459,12 @@ export const products: Product[] = [
       "Moving industrial machine electrical circuits",
       "High-speed power transmission lines"
     ],
+    usage: [
+      "EOT Cranes and Hoists",
+      "Monorails and Shuttle Conveyors",
+      "Moving industrial machine electrical circuits",
+      "High-speed power transmission lines"
+    ],
     specifications: {
       "Material": "Electrolytic Copper and alloy",
       "Rated Voltage": "Up to 660 Vac",
@@ -414,6 +487,12 @@ export const products: Product[] = [
       "Industrial grade spring-tensioned mounting"
     ],
     applications: [
+      "Moving machinery grounding",
+      "Short circuit current protection",
+      "Safety earthing for cranes and trolleys",
+      "Industrial soil-to-machine bonding"
+    ],
+    usage: [
       "Moving machinery grounding",
       "Short circuit current protection",
       "Safety earthing for cranes and trolleys",
@@ -442,6 +521,12 @@ export const products: Product[] = [
       "Weather-resistant industrial enclosure"
     ],
     applications: [
+      "Construction sites",
+      "Fabrication shops",
+      "Shipyards and heavy engineering zones",
+      "Multi-user welding workstations"
+    ],
+    usage: [
       "Construction sites",
       "Fabrication shops",
       "Shipyards and heavy engineering zones",
@@ -477,6 +562,12 @@ export const products: Product[] = [
       "Tension and force measurement",
       "Heavy-duty lifting and crane scales"
     ],
+    usage: [
+      "Weighbridges and silos",
+      "Industrial platform scales",
+      "Tension and force measurement",
+      "Heavy-duty lifting and crane scales"
+    ],
     specifications: {
       "Capacity": "Up to 100 ton",
       "Rated Output": "2.0 ± 0.2 mV/V",
@@ -505,6 +596,12 @@ export const products: Product[] = [
       "Switchgear inspection",
       "Transmission system earthing"
     ],
+    usage: [
+      "Substation maintenance",
+      "Capacitor bank discharging",
+      "Switchgear inspection",
+      "Transmission system earthing"
+    ],
     specifications: {
       "Operating Principle": "Static charge dissipation to earth",
       "Operating Voltage": "High Voltage compatible (Passive)",
@@ -527,6 +624,12 @@ export const products: Product[] = [
       "Integrated Thruster / Electromagnetic braking"
     ],
     applications: [
+      "Steel mills and foundries",
+      "Heavy fabrication shops",
+      "Warehousing and logistics",
+      "Power plant turbine halls"
+    ],
+    usage: [
       "Steel mills and foundries",
       "Heavy fabrication shops",
       "Warehousing and logistics",
@@ -561,6 +664,12 @@ export const products: Product[] = [
       "Warehouse loading",
       "Industrial plant assembly"
     ],
+    usage: [
+      "Workshop maintenance",
+      "Construction site lifting",
+      "Warehouse loading",
+      "Industrial plant assembly"
+    ],
     specifications: {
       "Product Type": "Manual Chain Block / Chain Pulley Block",
       "Lifting Capacity": "0.5 / 1 / 2 / 3 / 5 / 10 / 20 Ton",
@@ -589,6 +698,12 @@ export const products: Product[] = [
       "Construction material lifting",
       "Sensitive load handling"
     ],
+    usage: [
+      "High-capacity rigging",
+      "Heavy machinery transport",
+      "Construction material lifting",
+      "Sensitive load handling"
+    ],
     specifications: {
       "Material of Construction (MOC)": "High Tenacity Polyester",
       "Tones / Capacity": "Customizable",
@@ -611,6 +726,12 @@ export const products: Product[] = [
       "Highly flexible for easy installation over existing wiring"
     ],
     applications: [
+      "Steel plant furnace areas",
+      "Foundry hose protection",
+      "Engine manifold wiring",
+      "Welding cable protection"
+    ],
+    usage: [
       "Steel plant furnace areas",
       "Foundry hose protection",
       "Engine manifold wiring",
@@ -644,6 +765,12 @@ export const products: Product[] = [
       "Process completion alerts",
       "Safety perimeter signaling"
     ],
+    usage: [
+      "Emergency evacuation alarms",
+      "Machine status indication",
+      "Process completion alerts",
+      "Safety perimeter signaling"
+    ],
     specifications: {
       "Type": "Electro-mechanical / Electronic Hooter",
       "Rated Voltage": "24 V DC / 110 V AC / 230 V AC",
@@ -667,6 +794,12 @@ export const products: Product[] = [
       "Standard-compliant for safe equipment connection"
     ],
     applications: [
+      "Construction site power distribution",
+      "Mining equipment power supply",
+      "Industrial machinery maintenance",
+      "Portable power tools"
+    ],
+    usage: [
       "Construction site power distribution",
       "Mining equipment power supply",
       "Industrial machinery maintenance",
@@ -700,6 +833,12 @@ export const products: Product[] = [
       "Industrial press systems",
       "Mobile hydraulic machinery"
     ],
+    usage: [
+      "Hydraulic power packs",
+      "Earthmoving equipment",
+      "Industrial press systems",
+      "Mobile hydraulic machinery"
+    ],
     specifications: {
       "Nominal Bore": "6 mm to 50 mm (1/4\" to 2\")",
       "Working Pressure": "Up to 420 bar (Customizable)",
@@ -723,6 +862,12 @@ export const products: Product[] = [
       "Wide range of configurations (Straight, Elbow, Tee)"
     ],
     applications: [
+      "Industrial hydraulic power units",
+      "High-pressure hose assemblies",
+      "Automotive and mobile hydraulics",
+      "Oil and gas fluid management"
+    ],
+    usage: [
       "Industrial hydraulic power units",
       "High-pressure hose assemblies",
       "Automotive and mobile hydraulics",
@@ -755,6 +900,12 @@ export const products: Product[] = [
       "Commercial office buildings",
       "Safety monitoring systems"
     ],
+    usage: [
+      "Industrial warehouses",
+      "Electrical control rooms",
+      "Commercial office buildings",
+      "Safety monitoring systems"
+    ],
     specifications: {
       "Condition Monitored": "Smoke only (Does not detect gas/heat/flame)",
       "Type": "Switch-type smoke detector",
@@ -777,6 +928,12 @@ export const products: Product[] = [
       "Versatile output types (Relay/NPN/PNP)"
     ],
     applications: [
+      "Industrial lighting automation",
+      "Security and intrusion detection",
+      "Automated door systems",
+      "Energy management systems"
+    ],
+    usage: [
       "Industrial lighting automation",
       "Security and intrusion detection",
       "Automated door systems",
@@ -810,6 +967,12 @@ export const products: Product[] = [
       "Construction site lifting",
       "Conveyor tensioning systems"
     ],
+    usage: [
+      "Mining and excavation",
+      "Marine and port handling",
+      "Construction site lifting",
+      "Conveyor tensioning systems"
+    ],
     specifications: {
       "Type": "Electric / Hydraulic / Manual",
       "Rated Load Capacity": "1 Ton to 50 Tons (customizable)",
@@ -833,6 +996,12 @@ export const products: Product[] = [
       "Wide diameter compatibility (DN 15 to DN 2000)"
     ],
     applications: [
+      "Water and wastewater management",
+      "Chemical processing plants",
+      "Food and beverage industry",
+      "Slurry and pulp flow monitoring"
+    ],
+    usage: [
       "Water and wastewater management",
       "Chemical processing plants",
       "Food and beverage industry",
@@ -865,6 +1034,12 @@ export const products: Product[] = [
       "Heavy welding gun handling",
       "Repetitive lifting tasks"
     ],
+    usage: [
+      "Assembly lines and workstations",
+      "Pneumatic tool suspension",
+      "Heavy welding gun handling",
+      "Repetitive lifting tasks"
+    ],
     specifications: {
       "Type": "Spring-loaded mechanical balancer",
       "Load Capacity Range": "0.5 – 120 kg (model dependent)",
@@ -876,9 +1051,9 @@ export const products: Product[] = [
   },
   {
     id: "industrial-fan",
-    name: "Industrial Fan (CAI-IF-220)",
+    name: "Industrial Fan",
     shortDescription: "Heavy-duty ventilation and process air handling system.",
-    description: "The CAI-IF-220 is a heavy-duty mechanical device engineered to move large volumes of air. It is essential for industrial ventilation, cooling, exhaust, and dust/fume extraction in workshops and plants, ensuring a safe and controlled environment.",
+    description: "This heavy-duty mechanical fan is engineered to move large volumes of air and is essential for industrial ventilation, cooling, exhaust, and dust/fume extraction in workshops and plants.",
     image: industrialCoolingFan,
     features: [
       "Available in Axial, Centrifugal, and HVLS variants",
@@ -893,8 +1068,14 @@ export const products: Product[] = [
       "Process air handling",
       "Workshop exhaust systems"
     ],
+    usage: [
+      "Plant ventilation and cooling",
+      "Dust and fume extraction",
+      "Process air handling",
+      "Workshop exhaust systems"
+    ],
     specifications: {
-      "Model": "CAI-IF-220",
+      "Model": "Standard industrial configuration",
       "Type": "Axial / Centrifugal / Blower / Exhaust / HVLS",
       "Airflow": "1,000 to 500,000+ CFM",
       "Static Pressure": "10 to 2,000+ Pa",
@@ -907,9 +1088,9 @@ export const products: Product[] = [
   },
   {
     id: "Infrared-temperature-sensor",
-    name: "Online Infrared Temperature Sensor (CAI600-400A)",
+    name: "Online Infrared Temperature Sensor",
     shortDescription: "Non-contact infrared surface temperature measurement system.",
-    description: "The CAI600-400A is a high-precision online infrared sensor that calculates surface temperature by measuring the intensity of infrared radiation emitted by a target without physical contact. Encased in 304 Stainless Steel, it is designed for stable, long-life operation in automation control and detection systems.",
+    description: "This high-precision online infrared sensor calculates surface temperature by measuring the intensity of infrared radiation emitted by a target without physical contact. Encased in 304 Stainless Steel, it is designed for stable, long-life operation in automation control and detection systems.",
     image: infraredTemperatureSensor,
     features: [
       "Non-contact measurement prevents target damage or contamination",
@@ -924,8 +1105,14 @@ export const products: Product[] = [
       "Construction material manufacturing",
       "Chemical industry automation"
     ],
+    usage: [
+      "Power equipment monitoring",
+      "Metallurgy and metal processing",
+      "Construction material manufacturing",
+      "Chemical industry automation"
+    ],
     specifications: {
-      "Model": "CAI600-400A",
+      "Model": "Standard industrial configuration",
       "Measuring Range": "0~100°C up to 1200°C (Selectable)",
       "Accuracy": "±2% of measured value or ±2°C",
       "Optical Resolution": "20:1",
@@ -937,9 +1124,9 @@ export const products: Product[] = [
   },
   {
     id: "monocrystalline-silicon-pressure-transmitter",
-    name: "Pressure Transmitter (CAI7961T Series)",
+    name: "Pressure Transmitter",
     shortDescription: "High-precision transmitter with German MEMS technology.",
-    description: "The CAI7961T Series utilizes high-quality German MEMS monocrystalline silicon sensor chips and an innovative dual-beam suspended design. It provides intelligent static pressure and temperature compensation to ensure high accuracy (±0.075%) and stability across a wide range of operating pressures.",
+    description: "This pressure transmitter utilizes high-quality German MEMS monocrystalline silicon sensor chips and an innovative dual-beam suspended design. It provides intelligent static pressure and temperature compensation for high accuracy and stability across a wide range of operating pressures.",
     image: pressureTransmitter,
     features: [
       "German MEMS monocrystalline silicon sensor technology",
@@ -954,8 +1141,14 @@ export const products: Product[] = [
       "Power generation facilities",
       "Water and wastewater treatment"
     ],
+    usage: [
+      "Oil and Gas process control",
+      "Chemical and Petrochemical plants",
+      "Power generation facilities",
+      "Water and wastewater treatment"
+    ],
     specifications: {
-      "Model": "CAI7961TGS/AS",
+      "Model": "Standard industrial configuration",
       "Precision": "±0.075%",
       "Range": "-0.1 to 40 MPa",
       "Turndown Ratio": "60:1",
@@ -979,6 +1172,12 @@ export const products: Product[] = [
       "Robust construction for industrial gas and fluid control"
     ],
     applications: [
+      "High-pressure gas cylinder regulation",
+      "Industrial fluid pressure control",
+      "Laboratory gas manifold systems",
+      "Pneumatic and hydraulic test benches"
+    ],
+    usage: [
       "High-pressure gas cylinder regulation",
       "Industrial fluid pressure control",
       "Laboratory gas manifold systems",

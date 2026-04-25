@@ -67,9 +67,9 @@ const ProductDetail = () => {
                 ))}
               </ul>
 
-              <h3 className="font-bold text-foreground mb-3" style={{ fontFamily: "var(--font-heading)" }}>Applications</h3>
+              <h3 className="font-bold text-foreground mb-3" style={{ fontFamily: "var(--font-heading)" }}>Usage</h3>
               <div className="flex flex-wrap gap-2 mb-6">
-                {product.applications.map((a) => (
+                {product.usage.map((a) => (
                   <span key={a} className="px-3 py-1 text-xs font-medium rounded-full bg-accent text-accent-foreground">{a}</span>
                 ))}
               </div>
