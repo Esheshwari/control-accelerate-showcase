@@ -2,33 +2,46 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => (
-  <footer className="gradient-industrial text-primary-foreground">
+  <footer className="bg-slate-950 text-slate-300">
     <div className="section-container py-12 md:py-16">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div>
-          <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate India</h3>
-          <p className="text-sm opacity-80 leading-relaxed">Leading manufacturer and supplier of industrial safety systems, electrical control devices, and heating solutions across India.</p>
+      <div className="grid gap-10 lg:grid-cols-3">
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate India</h3>
+          <p className="max-w-md text-sm leading-relaxed text-slate-400">
+            Leading manufacturer and supplier of industrial safety systems, electrical control devices, and heating solutions across India.
+          </p>
         </div>
+
         <div>
-          <h4 className="font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>Quick Links</h4>
-          <div className="flex flex-col gap-2 text-sm opacity-80">
-            <Link to="/" className="hover:opacity-100 transition-opacity">Home</Link>
-            <a href="#products" className="hover:opacity-100 transition-opacity">Products</a>
-            <a href="#about" className="hover:opacity-100 transition-opacity">About Us</a>
-            <a href="#contact" className="hover:opacity-100 transition-opacity">Contact</a>
+          <h4 className="mb-4 text-lg font-semibold text-white" style={{ fontFamily: "var(--font-heading)" }}>Quick Links</h4>
+          <div className="flex flex-col gap-3 text-sm text-slate-300">
+            <Link to="/" className="transition hover:text-primary">Home</Link>
+            <a href="#products" className="transition hover:text-primary">Products</a>
+            <a href="#about" className="transition hover:text-primary">About Us</a>
+            <a href="#contact" className="transition hover:text-primary">Contact</a>
           </div>
         </div>
+
         <div>
-          <h4 className="font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>Contact Info</h4>
-          <div className="flex flex-col gap-3 text-sm opacity-80">
-            <span className="flex items-center gap-2"><Phone className="w-4 h-4" /> +91 95704 05891 / 99313 78518 / 89879 16181</span>
-            <span className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@controlandaccelerate.com</span>
-            <span className="flex items-start gap-2"><MapPin className="w-4 h-4" /> Registered Office Address :- 515, Industrial Area, Bahuarwa, Near Ashoka Pillar, Lauria,
-West Champaran, Bihar - India</span>
+          <h4 className="mb-4 text-lg font-semibold text-white" style={{ fontFamily: "var(--font-heading)" }}>Contact Info</h4>
+          <div className="space-y-4 text-sm text-slate-300">
+            <div className="flex items-start gap-3">
+              <Phone className="mt-1 h-4 w-4 text-primary" />
+              <span>+91 95704 05891 / 99313 78518 / 89879 16181</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <Mail className="mt-1 h-4 w-4 text-primary" />
+              <span>info@controlandaccelerate.com</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <MapPin className="mt-1 h-4 w-4 text-primary" />
+              <span>515, Industrial Area, Bahuarwa, Near Ashoka Pillar, Lauria, West Champaran, Bihar - India</span>
+            </div>
           </div>
         </div>
       </div>
-      <div className="mt-10 pt-6 border-t border-primary-foreground/20 text-center text-sm opacity-60">
+
+      <div className="mt-12 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
         © {new Date().getFullYear()} Control & Accelerate India. All rights reserved.
       </div>
     </div>

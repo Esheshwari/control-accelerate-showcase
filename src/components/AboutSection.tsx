@@ -7,12 +7,7 @@ const stats = [
   { icon: Award, number: "100%", label: "Quality Tested" },
 ];
 
-const industries = [
-  "Mining & Minerals", "Cement & Concrete", "Steel & Metals", "Power Generation",
-  "Chemical & Petrochemical", "Food & Beverage", "Pharmaceutical", "Automotive",
-];
-
-const reasons = [
+const features = [
   { title: "ISO Certified Quality", desc: "All products manufactured under strict quality control systems." },
   { title: "Pan-India Supply", desc: "Nationwide delivery with prompt dispatch and reliable logistics." },
   { title: "Custom Solutions", desc: "We design and build products tailored to your specific requirements." },
@@ -20,76 +15,52 @@ const reasons = [
 ];
 
 const AboutSection = () => (
-  <>
-    {/* About */}
-    <section id="about" className="section-padding">
-      <div className="section-container">
-        <div className="max-w-3xl mx-auto text-center">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary" style={{ fontFamily: "var(--font-heading)" }}>About Us</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6" style={{ fontFamily: "var(--font-heading)" }}>
+  <section id="about" className="section-padding bg-slate-950 text-white">
+    <div className="section-container">
+      <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
+        <div>
+          <span className="text-sm font-semibold uppercase tracking-[0.35em] text-primary" style={{ fontFamily: "var(--font-heading)" }}>About Us</span>
+          <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
             Powering Indian Industry Since 2005
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Control & Accelerate India is a trusted manufacturer and supplier of industrial safety systems, electrical control devices, and heating solutions. With over 18 years of experience, we serve industries across India with reliable, high-quality products that meet international standards. Our commitment to innovation, quality, and customer satisfaction has made us a preferred partner for leading companies in mining, power, cement, steel, and manufacturing sectors.
+          <p className="mt-6 max-w-xl text-base text-slate-300 sm:text-lg">
+            Control & Accelerate India is a trusted manufacturer and supplier of industrial safety systems, electrical control devices, and heating solutions. With over 18 years of experience, we serve industries across India with reliable, high-quality products that meet international standards.
+          </p>
+          <p className="mt-4 max-w-xl text-base text-slate-300 sm:text-lg">
+            Our commitment to innovation, quality, and customer satisfaction has made us a preferred partner for leading companies in mining, power, cement, steel, and manufacturing sectors.
           </p>
         </div>
-      </div>
-    </section>
 
-    {/* Stats */}
-    <section className="py-12 gradient-industrial">
-      <div className="section-container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <s.icon className="w-8 h-8 mx-auto mb-3" style={{ color: "hsl(var(--teal-glow))" }} />
-              <div className="text-3xl md:text-4xl font-bold mb-1" style={{ fontFamily: "var(--font-heading)", color: "white" }}>{s.number}</div>
-              <div className="text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>{s.label}</div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {stats.map((item) => {
+            const Icon = item.icon;
+            return (
+              <div key={item.label} className="card-industrial p-6 border-white/5 bg-white/5">
+                <div className="flex items-center gap-4">
+                  <div className="rounded-2xl bg-primary/10 p-3 text-primary">
+                    <Icon className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>{item.number}</div>
+                    <p className="text-sm text-slate-300">{item.label}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </section>
 
-    {/* Industries */}
-    <section className="section-padding bg-secondary">
-      <div className="section-container">
-        <div className="text-center mb-10">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary" style={{ fontFamily: "var(--font-heading)" }}>Industries We Serve</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: "var(--font-heading)" }}>
-            Trusted Across Major Industries
-          </h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {industries.map((ind) => (
-            <div key={ind} className="card-industrial p-5 text-center">
-              <span className="font-semibold text-foreground text-sm">{ind}</span>
-            </div>
-          ))}
-        </div>
+      <div className="mt-16 grid gap-6 lg:grid-cols-2">
+        {features.map((feature) => (
+          <div key={feature.title} className="card-industrial p-8 border-white/10 bg-white/5 hover:-translate-y-1 transition-transform duration-200">
+            <h3 className="text-xl font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>{feature.title}</h3>
+            <p className="mt-3 text-slate-300">{feature.desc}</p>
+          </div>
+        ))}
       </div>
-    </section>
-
-    {/* Why Choose Us */}
-    <section className="section-padding">
-      <div className="section-container">
-        <div className="text-center mb-10">
-          <span className="text-sm font-semibold uppercase tracking-wider text-primary" style={{ fontFamily: "var(--font-heading)" }}>Why Choose Us</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2" style={{ fontFamily: "var(--font-heading)" }}>
-            Your Reliable Industrial Partner
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {reasons.map((r) => (
-            <div key={r.title} className="card-industrial p-6">
-              <h3 className="font-bold text-foreground mb-2" style={{ fontFamily: "var(--font-heading)" }}>{r.title}</h3>
-              <p className="text-sm text-muted-foreground">{r.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  </>
+    </div>
+  </section>
 );
 
 export default AboutSection;

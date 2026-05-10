@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone, ShoppingCart, User, LogOut } from "lucide-react";
+import { Menu, X, Phone, ShoppingCart, LogOut, Globe2, Search } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useCart } from "@/contexts/CartContext";
 
@@ -16,89 +16,76 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="section-container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/logo-images.png" alt="Control & Accelerate Logo" className="w-10 h-10 rounded-md" />
-          <div className="leading-tight">
-            <span className="font-bold text-foreground text-sm md:text-base" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate</span>
-            <span className="block text-xs text-muted-foreground">India</span>
-          </div>
-        </Link>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/60 text-white">
+      <div className="section-container flex items-center justify-between h-16 md:h-20 gap-4">
+        <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
+            <img src="/logo-images.png" alt="Control & Accelerate Logo" className="w-11 h-11 rounded-md border border-white/10 bg-white/5 object-cover" />
+            <div className="leading-tight">
+              <span className="font-bold text-sm md:text-base" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate</span>
+              <span className="block text-[11px] text-slate-300">Industrial Solutions</span>
+            </div>
+          </Link>
+        </div>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <Link to="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Home</Link>
-          <button onClick={() => scrollTo("products")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">Products</button>
-          <button onClick={() => scrollTo("about")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">About</button>
-          <button onClick={() => scrollTo("contact")} className="text-sm font-medium text-foreground hover:text-primary transition-colors">Contact</button>
-          <div className="flex items-center gap-4">
-            {/* Cart Icon */}
-            <Link to="/cart" className="relative text-sm font-medium text-foreground hover:text-primary transition-colors">
-              <ShoppingCart className="w-5 h-5" />
-              {getTotalItems() > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {getTotalItems()}
-                </span>
-              )}
-            </Link>
-            {/* Auth Buttons */}
-            {isAuthenticated ? (
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-muted-foreground">Hi, {user?.name}</span>
-                <button
-                  onClick={logout}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1"
-                >
-                  <LogOut className="w-4 h-4" />
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <div className="flex items-center gap-2">
-                <Link to="/login" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Sign In</Link>
-                <Link to="/register" className="btn-industrial px-3 py-1.5 text-sm">Register</Link>
-              </div>
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-100">
+          <button onClick={() => scrollTo("products")} className="transition hover:text-primary">Products</button>
+          <button onClick={() => scrollTo("about")} className="transition hover:text-primary">About</button>
+          <button onClick={() => scrollTo("contact")} className="transition hover:text-primary">Contact</button>
+          <Link to="/cart" className="group relative flex items-center gap-2 transition hover:text-primary">
+            <ShoppingCart className="w-5 h-5" />
+            Cart
+            {getTotalItems() > 0 && (
+              <span className="absolute -top-2 -right-5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[11px] text-primary-foreground">
+                {getTotalItems()}
+              </span>
             )}
-          </div>
-          <a href="tel:+91 95704 05891" className="btn-industrial px-4 py-2 text-sm gap-2">
-            <Phone className="w-4 h-4" /> Get a Quote
-          </a>
+          </Link>
         </nav>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-foreground">
+        <div className="hidden lg:flex items-center gap-3">
+          <button className="icon-button" aria-label="Search">
+            <Search className="w-4 h-4" />
+          </button>
+          <button className="icon-button" aria-label="Language options">
+            <Globe2 className="w-4 h-4" />
+          </button>
+          <a href="tel:+919570405891" className="btn-industrial px-4 py-2 text-sm gap-2">
+            <Phone className="w-4 h-4" /> Call Now
+          </a>
+        </div>
+
+        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 text-white">
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-background border-b border-border">
+        <div className="lg:hidden bg-slate-950/95 border-t border-slate-800/70">
           <div className="section-container py-4 flex flex-col gap-3">
-            <Link to="/" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2">Home</Link>
-            <button onClick={() => scrollTo("products")} className="text-sm font-medium py-2 text-left">Products</button>
-            <button onClick={() => scrollTo("about")} className="text-sm font-medium py-2 text-left">About</button>
-            <button onClick={() => scrollTo("contact")} className="text-sm font-medium py-2 text-left">Contact</button>
-            <Link to="/cart" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2 flex items-center gap-2">
-              <ShoppingCart className="w-4 h-4" />
-              Cart ({getTotalItems()})
+            <button onClick={() => scrollTo("products")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">Products</button>
+            <button onClick={() => scrollTo("about")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">About</button>
+            <button onClick={() => scrollTo("contact")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">Contact</button>
+            <Link to="/cart" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-sm font-medium py-2 text-white transition hover:text-primary">
+              <ShoppingCart className="w-4 h-4" /> Cart ({getTotalItems()})
             </Link>
             {isAuthenticated ? (
               <>
-                <span className="text-sm text-muted-foreground py-2">Hi, {user?.name}</span>
+                <span className="text-sm text-slate-300 py-2">Hi, {user?.name}</span>
                 <button
                   onClick={() => { logout(); setIsOpen(false); }}
-                  className="text-sm font-medium py-2 text-left flex items-center gap-2"
+                  className="text-left text-sm font-medium py-2 text-white transition hover:text-primary flex items-center gap-2"
                 >
-                  <LogOut className="w-4 h-4" />
-                  Logout
+                  <LogOut className="w-4 h-4" /> Logout
                 </button>
               </>
             ) : (
               <>
-                <Link to="/login" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2">Sign In</Link>
-                <Link to="/register" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2">Register</Link>
+                <Link to="/login" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2 text-white transition hover:text-primary">Sign In</Link>
+                <Link to="/register" onClick={() => setIsOpen(false)} className="btn-industrial px-3 py-2 text-sm">Register</Link>
               </>
             )}
-            <a href="tel:+91 95704 05891" className="btn-industrial px-4 py-2 text-sm text-center gap-2">
+            <a href="tel:+919570405891" className="btn-industrial px-4 py-2 text-sm text-center gap-2">
               <Phone className="w-4 h-4" /> Get a Quote
             </a>
           </div>

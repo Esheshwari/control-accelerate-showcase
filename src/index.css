@@ -111,17 +111,38 @@
     background: linear-gradient(135deg, hsl(var(--industrial-dark) / 0.85), hsl(var(--primary) / 0.7));
   }
 
+  .hero-section {
+    min-height: calc(100vh - 80px);
+    position: relative;
+  }
+
+  .hero-action-card {
+    @apply flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white shadow-lg shadow-black/10 transition hover:border-primary/70 hover:bg-white/10;
+  }
+
+  .hero-feature-card {
+    @apply absolute bottom-0 left-0 right-0 mx-6 mb-6 rounded-[1.75rem] border border-white/10 bg-slate-950/90 p-6 shadow-2xl shadow-slate-950/60;
+  }
+
+  .feature-pill {
+    @apply inline-flex items-center rounded-full border border-slate-700/70 bg-slate-900/80 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-primary hover:text-white;
+  }
+
+  .icon-button {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-primary hover:bg-white/10;
+  }
+
   .card-industrial {
-    @apply bg-card rounded-lg border border-border shadow-sm hover:shadow-lg transition-all duration-300;
+    @apply rounded-3xl border border-slate-800/80 bg-white/5 shadow-lg shadow-slate-950/10 transition-all duration-300;
   }
 
   .card-industrial:hover {
+    transform: translateY(-4px);
     border-color: hsl(var(--primary) / 0.4);
-    transform: translateY(-2px);
   }
 
   .btn-industrial {
-    @apply inline-flex items-center justify-center rounded-md font-semibold transition-all duration-200;
+    @apply inline-flex items-center justify-center rounded-xl font-semibold transition-all duration-200;
     font-family: var(--font-heading);
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
