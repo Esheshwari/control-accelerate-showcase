@@ -29,8 +29,11 @@ const Header = () => {
         </div>
 
         <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-100">
+          <button onClick={() => scrollTo("home")} className="transition hover:text-primary">Home</button>
           <button onClick={() => scrollTo("products")} className="transition hover:text-primary">Products</button>
-          <button onClick={() => scrollTo("about")} className="transition hover:text-primary">About</button>
+          <button onClick={() => scrollTo("about")} className="transition hover:text-primary">About Us</button>
+          <button onClick={() => scrollTo("services")} className="transition hover:text-primary">Services</button>
+          <button onClick={() => scrollTo("dealers")} className="transition hover:text-primary">Dealers</button>
           <button onClick={() => scrollTo("contact")} className="transition hover:text-primary">Contact</button>
           <Link to="/cart" className="group relative flex items-center gap-2 transition hover:text-primary">
             <ShoppingCart className="w-5 h-5" />
@@ -44,12 +47,17 @@ const Header = () => {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <button className="icon-button" aria-label="Search">
-            <Search className="w-4 h-4" />
-          </button>
-          <button className="icon-button" aria-label="Language options">
-            <Globe2 className="w-4 h-4" />
-          </button>
+          {isAuthenticated ? (
+            <>
+              <span className="text-sm text-slate-200">Welcome, {user?.name}</span>
+              <button onClick={logout} className="btn-industrial px-4 py-2 text-sm">Logout</button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="text-sm font-medium text-slate-100 transition hover:text-primary">Login</Link>
+              <Link to="/register" className="btn-industrial px-4 py-2 text-sm">Register</Link>
+            </>
+          )}
           <a href="tel:+919570405891" className="btn-industrial px-4 py-2 text-sm gap-2">
             <Phone className="w-4 h-4" /> Call Now
           </a>
@@ -63,8 +71,11 @@ const Header = () => {
       {isOpen && (
         <div className="lg:hidden bg-slate-950/95 border-t border-slate-800/70">
           <div className="section-container py-4 flex flex-col gap-3">
+            <button onClick={() => scrollTo("home")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">Home</button>
             <button onClick={() => scrollTo("products")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">Products</button>
-            <button onClick={() => scrollTo("about")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">About</button>
+            <button onClick={() => scrollTo("about")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">About Us</button>
+            <button onClick={() => scrollTo("services")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">Services</button>
+            <button onClick={() => scrollTo("dealers")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">Dealers</button>
             <button onClick={() => scrollTo("contact")} className="text-left text-sm font-medium py-2 text-white transition hover:text-primary">Contact</button>
             <Link to="/cart" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-sm font-medium py-2 text-white transition hover:text-primary">
               <ShoppingCart className="w-4 h-4" /> Cart ({getTotalItems()})
@@ -81,7 +92,7 @@ const Header = () => {
               </>
             ) : (
               <>
-                <Link to="/login" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2 text-white transition hover:text-primary">Sign In</Link>
+                <Link to="/login" onClick={() => setIsOpen(false)} className="text-sm font-medium py-2 text-white transition hover:text-primary">Login</Link>
                 <Link to="/register" onClick={() => setIsOpen(false)} className="btn-industrial px-3 py-2 text-sm">Register</Link>
               </>
             )}

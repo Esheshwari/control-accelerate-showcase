@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import emailjs from 'emailjs-com';
 
 const ContactSection = () => {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", product: "", message: "" });
+  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", product: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -18,6 +18,7 @@ const ContactSection = () => {
 
       const templateParams = {
         from_name: form.name,
+        company: form.company,
         from_email: form.email,
         phone: form.phone,
         product: form.product,
@@ -28,7 +29,7 @@ const ContactSection = () => {
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
       toast.success("Thank you! Your enquiry has been submitted. We will contact you shortly.");
-      setForm({ name: "", email: "", phone: "", product: "", message: "" });
+      setForm({ name: "", company: "", email: "", phone: "", product: "", message: "" });
     } catch (error) {
       console.error('Email send error:', error);
       toast.error("Failed to send enquiry. Please try again or contact us directly.");
@@ -93,20 +94,30 @@ const ContactSection = () => {
               />
               <input
                 required
+                placeholder="Company Name"
+                value={form.company}
+                onChange={(e) => setForm({ ...form, company: e.target.value })}
+                className="w-full rounded-xl border border-slate-700/70 bg-slate-900/80 px-4 py-3 text-sm text-white outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+              />
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 mt-4">
+              <input
+                required
                 type="email"
                 placeholder="Email Address"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full rounded-xl border border-slate-700/70 bg-slate-900/80 px-4 py-3 text-sm text-white outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
               />
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 mt-4">
               <input
+                required
                 placeholder="Phone Number"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 className="w-full rounded-xl border border-slate-700/70 bg-slate-900/80 px-4 py-3 text-sm text-white outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
               />
+            </div>
+            <div className="mt-4">
               <input
                 placeholder="Product Interest"
                 value={form.product}

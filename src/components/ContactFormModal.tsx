@@ -7,7 +7,6 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,6 +22,7 @@ interface ContactFormModalProps {
 const ContactFormModal = ({ open, setOpen, productName }: ContactFormModalProps) => {
   const [form, setForm] = useState({
     name: "",
+    company: "",
     email: "",
     phone: "",
     product: productName || "",
@@ -42,6 +42,7 @@ const ContactFormModal = ({ open, setOpen, productName }: ContactFormModalProps)
 
       const templateParams = {
         from_name: form.name,
+        company: form.company,
         from_email: form.email,
         phone: form.phone,
         product: form.product,
@@ -52,7 +53,7 @@ const ContactFormModal = ({ open, setOpen, productName }: ContactFormModalProps)
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
       toast.success("Thank you! Your enquiry has been submitted. We will contact you shortly.");
-      setForm({ name: "", email: "", phone: "", product: productName || "", message: "" });
+      setForm({ name: "", company: "", email: "", phone: "", product: productName || "", message: "" });
       setOpen(false);
     } catch (error) {
       console.error('Email send error:', error);
@@ -85,6 +86,18 @@ const ContactFormModal = ({ open, setOpen, productName }: ContactFormModalProps)
               />
             </div>
             <div>
+              <Label htmlFor="company">Company *</Label>
+              <Input
+                id="company"
+                name="company"
+                value={form.company}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
               <Label htmlFor="email">Email *</Label>
               <Input
                 id="email"
@@ -95,8 +108,6 @@ const ContactFormModal = ({ open, setOpen, productName }: ContactFormModalProps)
                 required
               />
             </div>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="phone">Phone</Label>
               <Input
@@ -106,6 +117,8 @@ const ContactFormModal = ({ open, setOpen, productName }: ContactFormModalProps)
                 onChange={handleChange}
               />
             </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="product">Product</Label>
               <Input

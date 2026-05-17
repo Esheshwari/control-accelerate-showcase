@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ArrowLeft, CheckCircle, Send, ShoppingCart } from "lucide-react";
 import { products } from "@/data/products";
@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import ContactFormModal from "@/components/ContactFormModal";
 
 const ProductDetail = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const product = products.find((p) => p.id === id);
   const [modalOpen, setModalOpen] = useState(false);
@@ -33,7 +34,8 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     if (!isAuthenticated) {
-      toast.error("Please sign in to add items to cart");
+      toast.error("Please login to add products to cart");
+      navigate("/login");
       return;
     }
     addToCart(product);
@@ -103,6 +105,25 @@ const ProductDetail = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "var(--font-heading)" }}>Related Products</h3>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {products.filter((item) => item.id !== product.id).slice(0, 3).map((item) => (
+                <Link
+                  key={item.id}
+                  to={`/product/${item.id}`}
+                  className="card-industrial overflow-hidden rounded-[1.75rem] border border-slate-800/60 bg-slate-950/90 transition hover:-translate-y-1"
+                >
+                  <img src={item.image} alt={item.name} className="h-44 w-full object-cover" />
+                  <div className="p-5">
+                    <h4 className="text-lg font-semibold text-white" style={{ fontFamily: "var(--font-heading)" }}>{item.name}</h4>
+                    <p className="mt-2 text-sm text-slate-300 line-clamp-2">{item.shortDescription}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, ShoppingCart } from "lucide-react";
 import { Product } from "@/data/products";
 import { useAuth } from "@/contexts/AuthContext";
@@ -8,11 +8,13 @@ import { toast } from "sonner";
 const ProductCard = ({ product }: { product: Product }) => {
   const { isAuthenticated } = useAuth();
   const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     if (!isAuthenticated) {
-      toast.error("Please sign in to add items to cart");
+      toast.error("Please login to add products to cart");
+      navigate("/login");
       return;
     }
     addToCart(product);
