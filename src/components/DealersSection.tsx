@@ -11,7 +11,7 @@ const DealersSection = () => (
           <h2 className="text-4xl font-bold leading-tight sm:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
             Partner with us for faster delivery and local support
           </h2>
-          <p className="text-base text-slate-600 sm:text-lg">
+          <p className="text-base text-slate-300 sm:text-lg">
             We work with a network of dealers and distributors across India to ensure prompt supply, installation support and regional service for large industrial orders.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
