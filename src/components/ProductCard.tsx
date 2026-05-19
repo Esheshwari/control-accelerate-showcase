@@ -26,7 +26,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
@@ -34,7 +34,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           Featured
         </div>
       </div>
-      <div className="p-5 flex flex-col gap-4">
+      <div className="p-4 flex flex-col gap-3">
         <div>
           <h3 className="text-xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{product.name}</h3>
           <p className="mt-3 text-sm leading-relaxed text-slate-300 line-clamp-3">{product.shortDescription}</p>

@@ -9,7 +9,7 @@ const categories = [
 ];
 
 const ProductGrid = () => (
-  <section id="products" className="section-padding bg-red-950 text-white">
+  <section id="products" className="section-padding bg-red-950 text-white py-14 md:py-16">
     <div className="section-container">
       <div className="text-center mb-10">
         <span className="text-sm font-semibold uppercase tracking-[0.35em] text-red-300" style={{ fontFamily: "var(--font-heading)" }}>Our Products</span>
@@ -23,7 +23,7 @@ const ProductGrid = () => (
 
       <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {categories.map((category) => (
-          <div key={category} className="card-industrial p-6 border-red-600/20 bg-black/80 hover:border-red-500/50">
+          <div key={category} className="card-industrial p-5 border-red-600/20 bg-black/80 hover:border-red-500/50">
             <p className="text-sm uppercase tracking-[0.28em] text-red-300">{category}</p>
           </div>
         ))}

@@ -57,7 +57,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/75 to-black" />
       </div>
 
-      <div className="section-container relative z-10 py-20 md:py-24">
+      <div className="section-container relative z-10 py-16 md:py-20">
         <div className="max-w-3xl">
           <span className="inline-flex rounded-full border border-red-600/30 bg-red-950/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-red-300 shadow-black/20">
             Industrial Control & Safety
