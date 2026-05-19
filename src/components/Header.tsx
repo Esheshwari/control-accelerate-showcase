@@ -28,7 +28,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-100">
+        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-100">
           <button onClick={() => scrollTo("home")} className="transition hover:text-primary">Home</button>
           <button onClick={() => scrollTo("products")} className="transition hover:text-primary">Products</button>
           <button onClick={() => scrollTo("about")} className="transition hover:text-primary">About Us</button>

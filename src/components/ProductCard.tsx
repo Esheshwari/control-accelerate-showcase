@@ -26,7 +26,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         <img
           src={product.image}
           alt={product.name}
-          className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
@@ -42,13 +42,13 @@ const ProductCard = ({ product }: { product: Product }) => {
         <div className="flex items-end justify-between gap-3">
           <Link
             to={`/product/${product.id}`}
-            className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold transition hover:border-primary hover:bg-primary/15"
+            className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold transition hover:border-primary hover:bg-primary/15"
           >
             Details <ArrowRight className="w-4 h-4" />
           </Link>
           <button
             onClick={handleAddToCart}
-            className="btn-industrial inline-flex items-center gap-2 px-4 py-2 text-sm"
+            className="btn-industrial inline-flex items-center gap-2 px-3 py-2 text-sm"
             title={isAuthenticated ? "Add to Cart" : "Sign in to add to cart"}
           >
             <ShoppingCart className="w-4 h-4" />

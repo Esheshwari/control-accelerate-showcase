@@ -57,19 +57,19 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/75 to-black" />
       </div>
 
-      <div className="section-container relative z-10 py-16 md:py-20">
+      <div className="section-container relative z-10 py-14 md:py-16">
         <div className="max-w-3xl">
           <span className="inline-flex rounded-full border border-red-600/30 bg-red-950/50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-red-300 shadow-black/20">
             Industrial Control & Safety
           </span>
-          <h1 className="mt-8 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl" style={{ fontFamily: "var(--font-heading)" }}>
+          <h1 className="mt-6 text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
             {slide.title}
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-slate-200 sm:text-xl">
+          <p className="mt-4 max-w-2xl text-base text-slate-200 sm:text-lg">
             {slide.subtitle}
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
             <button onClick={scrollToProducts} className="btn-industrial px-6 py-3 text-sm font-semibold gap-2">
               Explore Products <ArrowDown className="w-4 h-4" />
             </button>
@@ -81,7 +81,7 @@ const HeroSection = () => {
             </a>
           </div>
 
-          <div className="mt-14 rounded-[2rem] border border-red-600/20 bg-slate-950/85 p-8 shadow-2xl shadow-black/60">
+          <div className="mt-10 rounded-[2rem] border border-red-600/20 bg-slate-950/85 p-6 shadow-2xl shadow-black/60">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[0.32em] text-red-300">{slide.badge}</p>

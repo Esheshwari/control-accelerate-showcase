@@ -41,18 +41,18 @@ const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-slate-950 text-white">
       <div className="section-container">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10">
           <span className="text-sm font-semibold uppercase tracking-[0.35em] text-red-300" style={{ fontFamily: "var(--font-heading)" }}>Contact Us</span>
           <h2 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl" style={{ fontFamily: "var(--font-heading)" }}>
             Request a quote or technical consultation
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-3 max-w-2xl text-base text-slate-300 sm:text-lg">
             Reach out for product selection, bulk enquiries or project support and our engineering team will respond promptly.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-start">
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-slate-950/50">
+        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] items-start">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-slate-950/50">
             <p className="text-sm uppercase tracking-[0.35em] text-red-300" style={{ fontFamily: "var(--font-heading)" }}>Direct Contact</p>
             <h3 className="mt-4 text-2xl font-semibold text-white" style={{ fontFamily: "var(--font-heading)" }}>
               Speak with our industrial solutions team
@@ -60,7 +60,7 @@ const ContactSection = () => {
             <p className="mt-4 text-base text-slate-300 leading-7">
               Fill out the enquiry form and include the product or application details for the fastest response.
             </p>
-            <div className="mt-8 space-y-5 text-sm text-slate-300">
+            <div className="mt-6 space-y-5 text-sm text-slate-300">
               <div className="flex items-start gap-3">
                 <Phone className="mt-1 h-5 w-5 text-red-300" />
                 <span>+91 95704 05891 / 99313 78518 / 89879 16181</span>
@@ -76,7 +76,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl shadow-slate-950/60">
+          <form onSubmit={handleSubmit} className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-2xl shadow-slate-950/60">
             <div className="grid gap-4 sm:grid-cols-2">
               <input
                 required
@@ -128,7 +128,7 @@ const ContactSection = () => {
             />
             <button
               type="submit"
-              className="btn-industrial mt-5 inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold"
+              className="btn-industrial mt-4 inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold"
               disabled={isSubmitting}
             >
               <Send className="w-4 h-4" /> {isSubmitting ? "Sending..." : "Send Enquiry"}

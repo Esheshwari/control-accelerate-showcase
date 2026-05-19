@@ -3,8 +3,8 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-slate-950 text-slate-300">
-    <div className="section-container py-12 md:py-16">
-      <div className="grid gap-10 lg:grid-cols-3">
+    <div className="section-container py-10 md:py-12">
+      <div className="grid gap-8 lg:grid-cols-3">
         <div className="space-y-4">
           <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "var(--font-heading)" }}>Control & Accelerate India</h3>
           <p className="max-w-md text-sm leading-relaxed text-slate-400">
@@ -41,7 +41,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
+      <div className="mt-10 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
         © {new Date().getFullYear()} Control & Accelerate India. All rights reserved.
       </div>
     </div>

@@ -45,12 +45,12 @@ const ProductDetail = () => {
     <>
       <Header />
       <main style={{ marginTop: "80px" }}>
-        <div className="section-container py-8">
-          <Link to="/#products" className="inline-flex items-center gap-2 text-sm text-primary hover:underline mb-6">
+        <div className="section-container py-6">
+          <Link to="/#products" className="inline-flex items-center gap-2 text-sm text-primary hover:underline mb-5">
             <ArrowLeft className="w-4 h-4" /> Back to Products
           </Link>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-secondary rounded-lg overflow-hidden">
               <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
             </div>
@@ -58,10 +58,10 @@ const ProductDetail = () => {
               <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ fontFamily: "var(--font-heading)" }}>
                 {product.name}
               </h1>
-              <p className="text-muted-foreground leading-relaxed mb-6">{product.description}</p>
+              <p className="text-muted-foreground leading-relaxed mb-5">{product.description}</p>
 
               <h3 className="font-bold text-foreground mb-3" style={{ fontFamily: "var(--font-heading)" }}>Key Features</h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-5">
                 {product.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" /> {f}
@@ -70,7 +70,7 @@ const ProductDetail = () => {
               </ul>
 
               <h3 className="font-bold text-foreground mb-3" style={{ fontFamily: "var(--font-heading)" }}>Usage</h3>
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {product.usage.map((a) => (
                   <span key={a} className="px-3 py-1 text-xs font-medium rounded-full bg-accent text-accent-foreground">{a}</span>
                 ))}
@@ -92,8 +92,8 @@ const ProductDetail = () => {
           </div>
 
           {/* Specifications Table */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "var(--font-heading)" }}>Technical Specifications</h3>
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold text-foreground mb-5" style={{ fontFamily: "var(--font-heading)" }}>Technical Specifications</h3>
             <div className="card-industrial overflow-hidden">
               <table className="w-full text-sm">
                 <tbody>
@@ -108,9 +108,9 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="mt-14">
-            <h3 className="text-2xl font-bold text-foreground mb-6" style={{ fontFamily: "var(--font-heading)" }}>Related Products</h3>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10">
+            <h3 className="text-2xl font-bold text-foreground mb-5" style={{ fontFamily: "var(--font-heading)" }}>Related Products</h3>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {products.filter((item) => item.id !== product.id).slice(0, 3).map((item) => (
                 <Link
                   key={item.id}

@@ -31,9 +31,9 @@ const Cart = () => {
   }
 
   return (
-    <div className="min-h-screen bg-secondary py-8 px-4">
+    <div className="min-h-screen bg-secondary py-6 px-4">
       <div className="max-w-4xl mx-auto">
-        <div className="flex items-center gap-4 mb-8">
+        <div className="flex items-center gap-4 mb-6">
           <Link to="/" className="text-muted-foreground hover:text-foreground">
             <ArrowLeft className="w-5 h-5" />
           </Link>
@@ -42,7 +42,7 @@ const Cart = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2 space-y-4">
             {items.map((item) => (
               <div key={item.product.id} className="card-industrial p-4">
@@ -89,7 +89,7 @@ const Cart = () => {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="card-industrial p-6 sticky top-4">
+            <div className="card-industrial p-5 sticky top-4">
               <h3 className="font-semibold text-foreground mb-4">Cart Summary</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">

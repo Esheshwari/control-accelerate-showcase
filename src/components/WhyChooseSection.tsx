@@ -19,11 +19,11 @@ const WhyChooseSection = () => (
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
+      <div className="mt-8 grid gap-5 md:grid-cols-3">
         {reasons.map((reason) => {
           const Icon = reason.icon;
           return (
-            <div key={reason.title} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-slate-950/40">
+            <div key={reason.title} className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-slate-950/40">
               <div className="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-red-950/70 text-red-300 mb-6">
                 <Icon className="h-6 w-6" />
               </div>
